@@ -25,7 +25,6 @@
 				{{translate 'SUBTOTAL: $(0)' subtotalFormatted}}
 			</div>
 			{{/if}}
-			<div data-view="MiniCart.Subtotal"></div>
 		</div>
 
 		<div class="header-mini-cart-buttons">
@@ -39,7 +38,6 @@
 					{{translate 'Checkout'}}
 				</a>
 			</div>
-			<div data-view="MiniCart.Actions"></div>
 		</div>
 
 		{{else}} 

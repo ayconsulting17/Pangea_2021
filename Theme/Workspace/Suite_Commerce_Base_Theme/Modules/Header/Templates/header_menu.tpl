@@ -1,7 +1,6 @@
-{{#unless isStandalone}}
 <nav class="header-menu-secondary-nav">
 
-	<div class="header-menu-search" data-view="SiteSearch.Button"></div>
+	<!--<div class="header-menu-search" data-view="SiteSearch.Button"></div>-->
 
 	<ul class="header-menu-level1">
 
@@ -10,6 +9,9 @@
 				<li {{#if categories}}data-toggle="categories-menu"{{/if}}>
 					<a class="{{class}}" {{objectToAtrributes this}}>
 					{{translate text}}
+						{{#if categories}}
+							<span class="down-indicator"></span>
+						{{/if}}
 					</a>
 					{{#if categories}}
 					<ul class="header-menu-level-container">
@@ -20,6 +22,7 @@
 									<a class="{{class}}" {{objectToAtrributes this}}>{{translate text}}</a>
 
 									{{#if categories}}
+									<span class="indicator"></span>
 									<ul class="header-menu-level3">
 										{{#each categories}}
 										<li>
@@ -41,11 +44,13 @@
 	</ul>
 
 </nav>
-{{/unless}}
+<div class="header-menu-search" data-view="SiteSearch.Button"></div>
+
+
 
 {{!----
-Use the following context variables when customizing this template:
-
+Use the following context variables when customizing this template: 
+	
 	categories (Array)
 	showExtendedMenu (Boolean)
 	showLanguages (Boolean)

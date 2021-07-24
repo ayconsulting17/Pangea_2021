@@ -1,10 +1,10 @@
 // Primary button variables
-$sc-button-primary-background-color: $sc-color-primary; /* editable({"type": "color", "label": "Background"}) */
+$sc-button-primary-background-color: $sapphire; /* editable({"type": "color", "label": "Background"}) */
 $sc-button-primary-text-color: white; /* editable({"type": "color", "label": "Text"}) */
 $sc-button-primary-border-color: $sc-button-primary-background-color; /* editable({"type": "color", "label": "Border"}) */
 $sc-button-primary-border-radius: $sc-border-radius; /* editable({"type": "string", "label": "Border radius"}) */
 
-$sc-button-primary-hover-background-color: desaturate(lighten($sc-button-primary-background-color, 10), 9); /* editable({"type": "color", "label": "Hover background"}) */
+$sc-button-primary-hover-background-color: $arapawa; /* editable({"type": "color", "label": "Hover background"}) */
 $sc-button-primary-hover-text-color: white; /* editable({"type": "color", "label": "Hover text"}) */
 $sc-button-primary-hover-border-color: $sc-button-primary-border-color; /* editable({"type": "color", "label": "Hover border"}) */
 
@@ -24,12 +24,12 @@ $sc-button-primary-text-transform: none; /* editable({
 }) */
 
 // Secondary button variables
-$sc-button-secondary-background-color: $sc-color-secondary; /* editable({"type": "color", "label": "Background"}) */
+$sc-button-secondary-background-color: $regent-gray; /* editable({"type": "color", "label": "Background"}) */
 $sc-button-secondary-text-color: white; /* editable({"type": "color", "label": "Text"}) */
 $sc-button-secondary-border-color: $sc-button-secondary-background-color; /* editable({"type": "color", "label": "Border"}) */
 $sc-button-secondary-border-radius: $sc-border-radius; /* editable({"type": "string", "label": "Border radius"}) */
 
-$sc-button-secondary-hover-background-color: desaturate(lighten($sc-button-secondary-background-color, 10), 9); /* editable({"type": "color", "label": "Hover background"}) */
+$sc-button-secondary-hover-background-color: $silver-chalice; /* editable({"type": "color", "label": "Hover background"}) */
 $sc-button-secondary-hover-text-color: white; /* editable({"type": "color", "label": "Hover text"}) */
 $sc-button-secondary-hover-border-color: $sc-button-secondary-border-color; /* editable({"type": "color", "label": "Hover border"}) */
 

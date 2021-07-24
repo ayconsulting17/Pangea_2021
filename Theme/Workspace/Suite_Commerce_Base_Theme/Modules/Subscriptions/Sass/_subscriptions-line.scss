@@ -7,14 +7,14 @@
     }
 }
 .subscriptions-line {
-  @extend .row;
-  @extend .info-card;
+//   @extend .row;
+//   @extend .info-card;
   margin: 0;
   margin-bottom: $sc-margin-lv2;
     overflow: auto;
 
   .subscriptions-line-info-card-content {
-      @extend .info-card-content;
+    //   @extend .info-card-content;
       margin: 0;
       vertical-align: top;
 
@@ -64,20 +64,20 @@
       }
   }
   .subscriptions-line-label-active {
-      @extend .label-success;
+    //   @extend .label-success;
   }
 
     .subscriptions-line-label-suspended,
     .subscriptions-line-label-processing {
-      @extend .label-warning;
+    //   @extend .label-warning;
   }
 
   .subscriptions-line-label-closed {
-      @extend .label-error;
+    //   @extend .label-error;
   }
 
   a.subscriptions-line-button-edit {
-      @extend .button-link;
+    //   @extend .button-link;
       margin: 0;
       padding: 0;
       font-weight: $sc-font-weight-bold;

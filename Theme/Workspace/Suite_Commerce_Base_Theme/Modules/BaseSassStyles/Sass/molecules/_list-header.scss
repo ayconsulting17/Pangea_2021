@@ -71,7 +71,7 @@
 }
 
 .list-header-expander-button {
-	@extend .button-tertiary;
+	@extend .button-secondary;
 	@extend .button-list-header;
 
 	&:hover .list-header-expander-icon {
@@ -107,8 +107,7 @@
 // https://github.com/twbs/bootstrap/issues/12093
 .list-header-filters-wrapper {
 	padding: $sc-padding-lv4 $sc-padding-lv2;
-	background: $sc-color-theme-background;
-	border: 1px solid $sc-color-theme-border-light;
+	background: $gallery;
 	margin-top: $sc-margin-lv4;
 
 	@media (min-width: $screen-sm-min) {

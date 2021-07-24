@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
 // Font size variables
 //
 // A scale of sizes has been defined for its use along the different elements of the theme.
@@ -18,19 +20,33 @@
 // $sc-font-weight-semibold - Semibold font weight
 // $sc-font-weight-bold - Bold font weight
 //
+// Markup:
+// <p style="font-size: $sc-font-size-xxs">Good design is obvious. Great design is transparent <strong>$sc-font-size-xxs</strong>.</p>
+// <p style="font-size: $sc-font-size-xs">Good design is obvious. Great design is transparent <strong>$sc-font-size-xs</strong>.</p>
+// <p style="font-size: $sc-font-size-s">Good design is obvious. Great design is transparent <strong>$sc-font-size-s</strong>.</p>
+// <p style="font-size: $sc-font-size-m">Good design is obvious. Great design is transparent <strong>$sc-font-size-m</strong>.</p>
+// <p style="font-size: $sc-font-size-l">Good design is obvious. Great design is transparent <strong>$sc-font-size-l</strong>.</p>
+// <p style="font-size: $sc-font-size-xl">Good design is obvious. Great design is transparent <strong>$sc-font-size-xl</strong>.</p>
+// <p style="font-size: $sc-font-size-xxl">Good design is obvious. Great design is transparent <strong>$sc-font-size-xxl</strong>.</p>
+// <p style="font-size: $sc-font-size-xxxl">Good design is obvious. Great design is transparent <strong>$sc-font-size-xxxl</strong>.</p>
+// <p style="font-weight: $sc-font-weight-light;">Freedom lies in being bold. - font weight $sc-font-weight-light.</p>
+// <p style="font-weight: $sc-font-weight-normal;">Freedom lies in being bold. - font weight $sc-font-weight-normal.</p>
+// <p style="font-weight: $sc-font-weight-semibold;">Freedom lies in being bold. - font weight $sc-font-weight-semibold.</p>
+// <p style="font-weight: $sc-font-weight-bold;">Freedom lies in being bold. - font weight $sc-font-weight-bold.</p>
+//
 // Styleguide 1.2
-$sc-font-size-base: 15px;
+$sc-font-size-base: 14px;
 $sc-font-size-xxs: 0.75rem;
 $sc-font-size-xs: 0.87rem;
 $sc-font-size-s: 0.93rem;
 $sc-font-size-m: 1rem;
-$sc-font-size-l: 1.067rem;
-$sc-font-size-xl: 1.2rem;
+$sc-font-size-l: 1.143rem;
+$sc-font-size-xl: 1.286rem;
 $sc-font-size-xxl: 1.47rem;
 $sc-font-size-xxxl: 1.73rem;
 
 // Font family
-$sc-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sc-font-family: "OpenSans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Font weight
 $sc-font-weight-light: 300;

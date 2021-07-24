@@ -17,11 +17,11 @@
 }
 
 input[type="number"].quantity-input {
- 	width: 62px;
+ 	width: 60px;
  	height: 40px;
  	text-align: right;
  	padding: $sc-margin-lv2;
-	background-color: $sc-color-theme-background;
+	background-color: #fff;
 	border: 0;
 	float: left;
 	margin-bottom: 0;
@@ -35,7 +35,7 @@ input[type="number"].quantity-input {
 }
 
 .quantity-input-button {
-	background-color: $sc-color-theme-500;
+	background-color: $silver-chalice;
 	color: $sc-neutral-shade-0;
 	border: none;
 	width: 40px;
@@ -43,7 +43,7 @@ input[type="number"].quantity-input {
 	float: left;
 
 	&:hover, &:active  {
-		background-color: $sc-color-theme-700;
+		background-color: $tundora;
 	}
 
 	&:focus {

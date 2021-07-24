@@ -1,7 +1,6 @@
 <li class="header-mini-cart-item-cell" data-item-id="{{itemId}}" data-item-type="{{itemType}}">
 		<a {{{linkAttributes}}}>
 			<div class="header-mini-cart-item-cell-image">
-				<div data-view="ItemThumbnail"></div>
 		    	{{#if isFreeGift}}
 		    		<span class="header-mini-cart-item-cell-free-badge">{{translate 'FREE'}}</span>
 		    	{{/if}}
@@ -11,25 +10,14 @@
 		<div class="header-mini-cart-item-cell-details">
 			<ul>
 				<li class="header-mini-cart-item-cell-product-title">
-                    {{#if isNavigable}}
-					    <a {{{linkAttributes}}} class="header-mini-cart-item-cell-title-navigable">{{line.item._name}}</a>
-                    {{else}}
-                        <span class="header-mini-cart-item-cell-title-viewonly">{{line.item._name}}</span>
-                    {{/if}}
+					<a {{{linkAttributes}}} class="header-mini-cart-item-cell-title-navigable">{{line.item._name}}</a>
 				</li>
 
 		    {{#if isPriceEnabled}}
 		    	{{#if isFreeGift}}
 			    	<li class="header-mini-cart-item-cell-product-price">{{line.total_formatted}}</li>
 		    	{{else}}
-                    <li class="header-mini-cart-item-cell-product-price">
-                        {{rateFormatted}}
-                        {{#if showComparePrice}}
-                            <small class="product-views-price-old">
-                                {{comparePriceFormatted}}
-                            </small>
-                        {{/if}}
-                    </li>
+			    <li class="header-mini-cart-item-cell-product-price">{{line.rate_formatted}}</li>
 		    	{{/if}}
 		    {{else}}
 		    	<li>
@@ -54,8 +42,8 @@
 
 
 {{!----
-Use the following context variables when customizing this template:
-
+Use the following context variables when customizing this template: 
+	
 	line (Object)
 	line.item (Object)
 	line.item.internalid (Number)

@@ -14,7 +14,7 @@ $sc-pusher-width-xs: 100%;
 $sc-pusher-width-md: 472px;
 
 .sc-pushing {
-    position: relative;
+    position:fixed;
 }
 
 // mobile only
@@ -113,14 +113,16 @@ $sc-pusher-width-md: 472px;
 $sc-push-header-height: 69px;
 
 .sc-pusher-header {
-    background: $sc-color-theme-background;
+    //background: $sc-color-theme-background;
     border-bottom: 1px solid $sc-color-theme-border-light;;
     margin-bottom: $sc-margin-lv4;
     height: $sc-push-header-height;
 }
 
 .sc-pusher-header-back {
-    color: $sc-color-link;
+    //color: $sc-color-link;
+    color: $sc-color-theme-background;
+    font-weight: $sc-font-weight-bold;
     text-transform: capitalize;
     display: inline-block;
     width:50%;
@@ -129,7 +131,7 @@ $sc-push-header-height: 69px;
 }
 .sc-pusher-header-back:after {
     font-family: FontAwesome;
-    content:"\f053";
+    content: "\f053";
     float: left;
     margin-right: $sc-margin-lv2;
 }

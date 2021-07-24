@@ -262,7 +262,6 @@ $sc-color-star-error: $sc-color-error;
 	background-color: $sc-color-success;
 	padding: $sc-padding-lv1 $sc-padding-lv2;
 }
-
 .icon-plus {
 	@extend .fa;
 	@extend %fa-plus;

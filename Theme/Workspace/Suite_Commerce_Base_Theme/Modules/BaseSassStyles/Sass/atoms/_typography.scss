@@ -32,7 +32,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-weight: $sc-font-weight-bold;
+    font-weight: $sc-font-weight-semibold;
     text-transform: capitalize;
 }
 
@@ -47,6 +47,8 @@ h1 {
     margin-top: $sc-h1-margin-top;
     margin-bottom: $sc-h1-margin-bottom;
     text-transform: $sc-h1-text-transform;
+
+    padding-bottom: $sc-padding-lv2;
 
     @media (min-width: $screen-md-min) {
         font-size: $sc-h1-desktop-font-size;
@@ -209,7 +211,6 @@ blockquote {
 }
 
 .medium-title-navigable {
-    color:$sc-color-secondary;
     font-size: $sc-font-size-l;
     font-weight:$sc-font-weight-semibold;
 
@@ -233,7 +234,6 @@ blockquote {
 .small-title-navigable {
     font-size: $sc-font-size-m;
     font-weight: $sc-font-weight-semibold;
-    color: $sc-color-secondary;
 
     :hover{
         color: $sc-color-link-hover;
@@ -254,7 +254,6 @@ blockquote {
 }
 
 .xsmall-title-navigable {
-    color: $sc-color-secondary;
     font-size: $sc-font-size-m;
     font-weight: $sc-font-weight-normal;
     text-transform: capitalize;

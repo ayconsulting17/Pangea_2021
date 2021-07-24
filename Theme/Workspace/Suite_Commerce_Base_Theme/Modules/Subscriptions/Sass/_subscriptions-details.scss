@@ -12,13 +12,13 @@
         text-transform: capitalize;
     }
 	.subscriptions-details-label-active {
-		@extend .label-success;
+		// @extend .label-success;
 	}
 	.subscriptions-details-label-suspended, .subscriptions-details-label-processing {
-		@extend .label-warning;
+		// @extend .label-warning;
 	}
 	.subscriptions-details-label-closed {
-		@extend .label-error;
+		// @extend .label-error;
 	}
 }
 

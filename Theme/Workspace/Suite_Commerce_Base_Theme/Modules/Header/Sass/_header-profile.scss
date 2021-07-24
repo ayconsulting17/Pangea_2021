@@ -81,8 +81,11 @@
 //my account menu
 .header-profile-menu-myaccount-container {
 	@extend .header-menu-level-container;
-	padding: $sc-padding-lv3 0 0 0;
+	padding: $sc-padding-lv3 0 $sc-padding-lv7;
 	z-index: 1002;
+	right: 0;
+	left: auto;
+	width: 500px;
 }
 
 .open .header-profile-welcome-link:before {

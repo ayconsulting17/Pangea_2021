@@ -60,7 +60,7 @@ input {
 
 	&:disabled {
 		border-color: $sc-color-theme-border-light;
-		background-color: $sc-color-theme-background;
+		background-color: $gallery;
 	}
 }
 
@@ -84,13 +84,6 @@ input[type="radio"] {
 	display: inline-block;
 	width: auto;
 	margin-right: $sc-margin-lv2;
-}
-
-input[type='radio'] {
-	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
-		width: 40px;
-		height: 40px;
-	}
 }
 
 input[type="date"]
@@ -173,7 +166,7 @@ select {
 
 	&:disabled {
 		border:1px solid $sc-color-theme-border-light;
-		background-color: $sc-color-theme-background;
+		background-color: $gallery;
 	}
 }
 
@@ -197,14 +190,13 @@ select {
 .selector {
 	display: block;
 	margin: $sc-margin-lv3;
+	float: left;
 	@media(min-width: $screen-md-min) {
-		float: left;
 		margin: 0px;
 	}
 
 	&-select {
 		width: 175px;
-		width: calc(100% - 40px);
 		border: 1px solid $sc-color-theme-border-light;
 		border-left: none;
 		height: $sc-target-size;
@@ -292,7 +284,7 @@ textarea {
 
 	input[type="checkbox"] + label::before {
 		font-family: FontAwesome;
-		content:"\f096";
+		content: "\f096";
 		font-size: 18px;
 		color: $sc-color-theme-700;
 		display: inline-block;
@@ -309,7 +301,7 @@ textarea {
 	}
 
 	input[type="checkbox"]:checked + label::before {
-		content:"\f046";
+		content: "\f046";
 	}
 }
 
@@ -346,7 +338,7 @@ textarea {
 
 	input[type="radio"] + label::before {
 		font-family: FontAwesome;
-		content:"\f10c";
+		content: "\f10c";
 		font-size: 18px;
 		color: $sc-color-theme-700;
 		display: inline-block;
@@ -363,7 +355,7 @@ textarea {
 	}
 
 	input[type="radio"]:checked + label::before {
-		content:"\f192";
+		content: "\f192";
 	}
 }
 
@@ -427,7 +419,7 @@ textarea {
 .sc-tooltip {
 	@extend .fa;
 	@extend %fa-question-circle;
-	color: $sc-color-secondary;
+	color: $dodger-blue;
 	cursor:pointer;
 }
 

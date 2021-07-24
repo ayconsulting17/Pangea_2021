@@ -56,7 +56,7 @@
 
 .pagination-links-number {
 	display: none;
-	background-color: $sc-color-theme-background;
+	font-weight: $sc-font-weight-bold;
 
 	@media (min-width: $screen-md-min) {
 		display: block;
@@ -64,17 +64,6 @@
 }
 
 .pagination-prev,
-.pagination-next {
-	background-color: $sc-color-theme-background;
-
-	a:hover{
-		background-color: $sc-color-theme-background;
-	}
-}
-
-.pagination-prev,
-
-
 .pagination-next,
 .pagination-next-disabled {
 	margin-left: $sc-margin-lv1;
@@ -91,10 +80,10 @@
 }
 
 .pagination-active {
-	color: $sc-color-primary;
+	color: $sc-neutral-shade;
 	cursor: default;
 
 	&:hover{
-		color: $sc-color-primary;
+		color: $sc-neutral-shade;
 	}
 }

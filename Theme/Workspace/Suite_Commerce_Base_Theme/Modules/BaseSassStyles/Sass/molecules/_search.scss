@@ -130,23 +130,18 @@ input.nav-search-input {
 .nav-search-button-submit{
     border-radius:0px;
     border:0px;
-    background: $sc-color-theme-700;
-    color: $sc-neutral-shade-0;
     padding: $sc-padding-lv3;
     float:right;
     visibility: hidden;
     position: absolute;
     top: 0;
     right: 0;
+    @extend .button-primary;
 
     @media (min-width: $screen-md-min){
         visibility: visible;
     }
 
-    &:hover, &:focus {
-        background: $sc-button-secondary-hover-background-color;
-        color: $sc-neutral-shade-0;
-    }
 }
 
 //Serach Button close toggle
@@ -172,7 +167,7 @@ input.nav-search-input {
 }
 
 //Typeahead plugin
-.tt-menu {
+.tt-dropdown-menu {
     width:100%;
     background: $sc-neutral-shade-0;
     margin-top: 1px;
@@ -187,6 +182,12 @@ input.nav-search-input {
         margin-top: $sc-margin-lv2;
     }
 }
+
+.tt-dropdown-menu-shadow-fix {
+    @include box-shadow(inset 0px 4px 6px -6px $sc-color-theme-700);
+    height: 3px;
+}
+
 
 .tt-menu-shadow-fix {
     @include box-shadow(inset 0px 4px 6px -6px $sc-color-theme-700);
@@ -244,12 +245,12 @@ input.nav-search-input {
     @extend .clearfix;
 
     &:hover {
-        background: $sc-color-theme-background;
+        background: $gallery;
     }
 }
 
 .tt-cursor {
-    background: $sc-color-theme-background;
+    background: $gallery;
 }
 
 .item-results-image{

@@ -5,6 +5,7 @@ body {
 	font-family: $sc-font-family;
 	background-color: $sc-color-body-background;
 	font-size: $sc-font-size-base;
+	font-weight: $sc-font-weight-light;
 	min-height:100%;
 	height: auto;
 }
@@ -52,6 +53,11 @@ a:hover, a:focus {
 
 a:active {
 	color: $sc-color-link-active;
+}
+a, button {
+	&:active, &:focus {
+		outline: none;
+	}
 }
 
 [data-toggle="dropdown"]:hover, [data-toggle="dropdown"]:focus{

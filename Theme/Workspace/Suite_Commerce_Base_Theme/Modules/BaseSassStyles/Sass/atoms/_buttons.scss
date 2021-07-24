@@ -69,6 +69,7 @@
 		border-color: $sc-button-secondary-active-border-color;
 	}
 
+
 	&:disabled, &-disabled {
 		opacity: 0.6;
 		cursor: default;
@@ -110,6 +111,21 @@
 	&:disabled {
 		opacity: 0.6;
 		cursor: default;
+	}
+}
+
+.button-quaternary {
+	background: #fff;
+	color: $tundora;
+	border-radius: $sc-button-primary-border-radius;
+	border: 1px solid $silver-chalice;
+	display: inline-block;
+	padding: $sc-padding-base $sc-padding-lv2;
+
+	&:hover, &:active, &:focus {
+		color: #fff;
+		background: $tundora;
+		border-color: $tundora;
 	}
 }
 
@@ -438,23 +454,23 @@
 
 .pill-button {
 	display: table-cell;
-	border: 1px solid $sc-color-theme-border;
-	color: $sc-color-secondary;
 	width: auto;
 	vertical-align: middle;
 	line-height: 1;
-	background: $sc-neutral-shade-0;
+	background: #fff;
+	border: 1px solid $tundora;
+	color: $tundora;
 
 	&:hover {
-		background-color: $sc-color-secondary;
-		border: 1px solid $sc-color-secondary;
-		color: $sc-neutral-shade-0;
+		background-color: $tundora;
+		border: 1px solid $tundora;
+		color: #fff;
 	}
 
 	&-active {
-		background-color: $sc-color-secondary;
-		border: 1px solid $sc-color-secondary;
-		color: $sc-neutral-shade-0;
+		background-color: $tundora;
+		border: 1px solid $tundora;
+		color: #fff;
 	}
 }
 

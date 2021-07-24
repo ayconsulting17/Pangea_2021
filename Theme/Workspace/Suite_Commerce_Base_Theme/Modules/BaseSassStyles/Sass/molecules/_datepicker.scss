@@ -71,7 +71,7 @@
 
 .datepicker {
 	position:absolute;
-	z-index:1;
+	z-index:1001;
 	display:none;
 	left: 0;
 	width: 300px;
@@ -108,7 +108,7 @@
 		width: 100%;
 		cursor: pointer;
 		text-align: center;
-		color: $sc-color-secondary;
+		color: #000;
 	}
 
 	.day {
@@ -119,11 +119,11 @@
 	}
 
 	.day.today {
-		background-color: $sc-color-theme-700;
+		background-color: $silver-chalice;
 		color: $sc-neutral-shade-0;
 
 		&:hover {
-			background-color: $sc-color-theme-500;
+			background-color: $tundora;
 	  	}
 	}
 
@@ -165,6 +165,7 @@
 
 	.day:hover, .month:hover, .year:hover {
 		background-color: $sc-color-theme-background;
+		color: #fff;
 	}
 
 	.day.active {
@@ -207,5 +208,5 @@
 }
 
 .datepicker-days table thead tr th {
-	color: $sc-color-secondary;
+
 }

@@ -3,7 +3,7 @@ $sc-main-navigation-background-color: $sc-header-background-color; /* editable({
 
 $sc-main-navigation-link-background-color: $sc-header-background-color;
 $sc-main-navigation-link-color: $sc-color-secondary; /* editable({"type": "color", "label": "Link"}) */
-$sc-main-navigation-link-text-transform: capitalize;
+$sc-main-navigation-link-text-transform: uppercase;
 $sc-main-navigation-link-letter-spacing: 0;
 $sc-main-navigation-link-border-color: initial;
 $sc-main-navigation-link-border-top-width: 0;
@@ -11,13 +11,13 @@ $sc-main-navigation-link-border-bottom-width: 0;
 $sc-main-navigation-link-margin-right: $sc-margin-lv1;
 
 $sc-main-navigation-link-hover-background-color: $sc-header-background-color;
-$sc-main-navigation-link-hover-color: $sc-color-link-hover; /* editable({"type": "color", "label": "Link hover"}) */
+$sc-main-navigation-link-hover-color: $cyan; /* editable({"type": "color", "label": "Link hover"}) */
 $sc-main-navigation-link-hover-border-color: initial;
 $sc-main-navigation-link-hover-border-top-width: 0;
 $sc-main-navigation-link-hover-border-bottom-width: 0;
 
 $sc-main-navigation-link-active-background-color: $sc-header-background-color;
-$sc-main-navigation-link-active-color: $sc-color-link-active; /* editable({"type": "color", "label": "Link active"}) */
+$sc-main-navigation-link-active-color: $cyan; /* editable({"type": "color", "label": "Link active"}) */
 $sc-main-navigation-link-active-border-color: initial;
 $sc-main-navigation-link-active-border-top-width: 0;
 $sc-main-navigation-link-active-border-bottom-width: 0;

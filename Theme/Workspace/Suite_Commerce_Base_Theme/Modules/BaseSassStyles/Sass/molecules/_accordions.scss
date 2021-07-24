@@ -36,7 +36,6 @@
 }
 
 .accordion-head-toggle {
-	color: $sc-color-secondary;
 	font-weight: $sc-font-weight-bold;
 }
 
@@ -47,7 +46,6 @@
 .accordion-head-toggle:hover,
 .accordion-head-toggle-secondary:hover {
 	text-decoration: none;
-	color: $sc-color-copy-dark;
 }
 
 .acordion-head-toggle-icon,
@@ -77,14 +75,14 @@
 .accordion-body-secondary,
 .accordion-body-alt {
 	overflow: hidden;
-	background-color: $sc-neutral-shade-0;
+	background-color: $gallery;
 	border: 1px solid $sc-color-theme-border;
 	border-top: 0;
 	width: 100%;
 }
 
 .accordion-body-alt {
-	background-color: $sc-color-theme-background;
+
 }
 
 .accordion-container {

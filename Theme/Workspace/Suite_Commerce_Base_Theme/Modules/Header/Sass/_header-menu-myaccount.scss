@@ -1,136 +1,106 @@
-.header-menu-myaccount-back {
-    @extend .header-sidebar-menu-back;
+.header-menu-myaccount-back{
+	@extend .header-sidebar-menu-back;
 }
 
 .header-menu-myaccount-pop-icon {
-    @extend .header-sidebar-menu-pop-icon;
+	@extend .header-sidebar-menu-pop-icon;
 }
 
 .header-menu-myaccount-menu-push-icon {
-    @extend .header-sidebar-menu-push-icon;
+	@extend .header-sidebar-menu-push-icon;
 }
 
 .header-sidebar-menu-wrapper .header-menu-myaccount-signout-link {
-    display: none;
+	display: none;
 }
 
 .header-menu-myaccount a.active {
-    background-color: $sc-color-theme-background;
+	background-color: $sc-color-theme-background;
 }
-.header-menu-myaccount-signout {
-    display: none;
-}
+
+
 
 //applies only to the myaccount menu on desktop header
 .header-menu-profile {
-    /*new menu*/
-    .header-menu-myaccount {
-        column-count: 5;
-        column-fill: balance;
-        column-gap: 10px;
-        margin-bottom: 20px;
-    }
+	position: relative;
 
-    .header-menu-myaccount-anchor {
-        display: none;
-    }
+	.header-menu-myaccount-anchor {
+		display: none;
+	}
 
-    .header-menu-myaccount-back {
-        display: none;
-    }
+	.header-menu-myaccount-overview-anchor {
+		@media (min-width: $screen-sm-min) {
+			font-size: $sc-font-size-m;
+			float: left;
+			padding: $sc-padding-lv3 0 $sc-padding-lv3 $sc-padding-lv2;
+		}
+	}
 
-    .header-menu-myaccount-menu-push-icon {
-        display: none;
-    }
+	.header-menu-myaccount-back {
+		display: none;
+	}
 
-    .header-menu-myaccount-signout {
-        display: inherit;
-        border-bottom: 1px solid $sc-color-theme-border-light;
-        @extend .clearfix;
-    }
+	.header-menu-myaccount-menu-push-icon{
+		display:none;
+	}
 
-    .header-menu-myaccount-item-level2 {
-        padding-top: 20px;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        padding-right: $sc-padding-lv8;
-    }
+	.header-menu-myaccount-overview {
+		margin-bottom: $sc-margin-lv3;
+		border-bottom: 1px solid $sc-color-theme-border-light;
+		@extend .clearfix;
+	}
 
-    .header-menu-myaccount-anchor-level2 {
-        @extend .header-menu-level2-anchor;
-        &:hover,
-        &:focus {
-            color: $sc-main-navigation-submenu-link-hover-color;
-        }
-    }
+	.header-menu-myaccount-item-level2 {
+		float: left;
+		width: 33%;
+	}
 
-    .header-menu-myaccount-span-level2 {
-        @extend .header-menu-level2-anchor;
-    }
+	.header-menu-myaccount-anchor-level2 {
+		@extend .header-menu-level2-anchor;
+		padding-left: $sc-padding-lv2;
+		margin-bottom: $sc-margin-lv2;
 
-    .header-menu-myaccount-anchor-level3 {
-        @extend .header-menu-level3-anchor;
-    }
+		display: block;
+		height: auto;
 
-    .header-menu-myaccount-signout-link {
-        float: right;
-        display: block;
-        padding-bottom: 10px;
-    }
+		&:hover, &:active, &:focus {
+			background: #fff;
+			cursor: auto;
+		}
+	}
 
-    .header-menu-myaccount-signout-icon {
-        @extend .fa;
-        @extend %fa-sign-out;
-        font-size: $sc-font-size-m;
-    }
+
+	.header-menu-myaccount-anchor-level3 {
+		@extend .header-menu-level3-anchor;
+		height: auto;
+
+		display: block;
+		//line-height: 35px;
+		//height: 35px;
+		//padding-left: 0;
+		padding-top: $sc-padding-base;
+		padding-bottom: $sc-padding-base;
+	}
+
+	.header-menu-myaccount-signout-link {
+		float: right;
+		display:block;
+		padding: $sc-padding-lv3 $sc-padding-lv2 $sc-padding-lv3 0;
+	}
+
+	.header-menu-myaccount-signout-icon{
+		@extend .fa;
+		@extend %fa-sign-out;
+		font-size: $sc-font-size-m;
+	}
 }
 
 .header-menu-myaccount-level4 {
-    @media (min-width: $screen-md-min) {
-        display: none;
-    }
+
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
 }
 
-.header-main-wrapper-standalone {
-    .open .header-profile-welcome-link:before {
-        top: 53px;
-    }
 
-    .open .header-profile-welcome-link:after {
-        top: 54px;
-    }
 
-    .header-profile-menu-myaccount-container {
-        background: transparent;
-        border-bottom: 0;
-        border-top: 0;
-        box-shadow: none;
-        min-height: auto;
-        padding-bottom: 0;
-        padding-top: 0;
-        -webkit-box-shadow: none;
-
-        .header-menu-myaccount-signout-link {
-            background: white;
-            border-bottom-color: transparentize($sc-neutral-shade-500, 1-0.2);
-            border-top: 1px solid $sc-color-theme-border-light;
-            margin-bottom: 0;
-            margin-top: $sc-margin-lv3;
-            overflow: auto;
-            padding: $sc-padding-lv3;
-            @include box-shadow(0 6px 12px transparentize($sc-neutral-shade-500, 1-0.175));
-        }
-
-        .header-menu-myaccount-item-level2 {
-            display: none;
-            @media (max-width: $screen-sm-min) {
-                display: block;
-            }
-        }
-    }
-    .header-menu-myaccount-signout {
-        margin-bottom: $sc-margin-lv7;
-        border: none;
-    }
-}

@@ -61,10 +61,6 @@
 	@extend .medium-title-navigable;
 }
 
-.header-mini-cart-item-cell-title-viewonly {
-    @extend .medium-title-viewonly;
-}
-
 .header-mini-cart-item-cell-free-badge {
 	@extend .free-badge;
 	font-size: $sc-font-size-xxs;

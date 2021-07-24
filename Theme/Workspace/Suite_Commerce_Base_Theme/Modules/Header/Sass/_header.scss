@@ -22,22 +22,10 @@ $sc-sidebar-size: 246px;
 
 .header-main-wrapper {
 	position: relative;
-	background-color: $sc-header-background-color;
 	box-shadow: none;
-
-	&.header-main-wrapper-standalone {
-		background: $sc-top-menu-background-color;
-		border-bottom: 1px solid $sc-top-menu-border-color;
-	}
 
 	@media (min-width: $screen-md-min) {
 		border-bottom: $sc-header-border-width solid $sc-header-border-color;
-	}
-
-	@media (max-width: $screen-sm-min) {
-		&.header-main-wrapper-standalone {
-			background-color: $sc-header-background-color;
-		}
 	}
 }
 
@@ -76,7 +64,6 @@ $sc-sidebar-size: 246px;
 		border: none;
 
 		a {
-			color: $sc-header-link-text-color;
 			text-transform: $sc-header-link-text-transform;
 
 			i {
@@ -137,7 +124,16 @@ $sc-sidebar-size: 246px;
 //header logo
 
 .header-logo-wrapper {
-	float: left;
+	display: block;
+
+	@media(min-width: $screen-lg-min) {
+		float: left;
+		display: inline-block;
+	}
+
+	@media(max-width: $screen-sm-max) {
+		margin-bottom: $sc-margin-lv4;
+	}
 }
 
 ///////////////////////////////////////////////////////////////
@@ -217,6 +213,14 @@ $sc-sidebar-size: 246px;
 
 	@media (min-width: $screen-md-min) {
 		display: none;
+	}
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		> div {
+			height: 100%;
+		}
+		.site-search-button-link {
+			height: 100%;
+		}
 	}
 }
 
@@ -302,15 +306,12 @@ $sc-sidebar-size: 246px;
 
 	@media (min-width: $screen-md-min) {
 		position: relative;
-		background-color: $sc-main-navigation-background-color;
-		border-bottom:1px solid $sc-color-theme-border-light;
 		top: auto;
 		bottom: auto;
 		left: auto;
 		width: auto;
-		&.header-secondary-wrapper-standalone {
-			height: 0;
-		}
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
@@ -458,4 +459,11 @@ $sc-sidebar-size: 246px;
 	@media(min-width: $screen-sm-min) {
 		display: none;
 	}
+}
+#header-logo-nav {
+	@extend .container;
+}
+
+#site-header {
+	background: $sapphire;
 }

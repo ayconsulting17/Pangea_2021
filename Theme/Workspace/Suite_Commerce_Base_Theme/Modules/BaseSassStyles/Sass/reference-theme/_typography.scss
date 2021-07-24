@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 // Font variables for body element
 $sc-body-font-family: $sc-font-family; /* editable({"type": "string", "label": "Font family"}) */
 $sc-body-font-size: $sc-font-size-m; /* editable({"type": "string", "label": "Mobile size"}) */
@@ -9,7 +12,7 @@ $sc-body-direction: ltr;
 
 // Font variables for paragraph elements. Font styles are inherit from body.
 $sc-paragraph-margin-top: 0;
-$sc-paragraph-margin-bottom: 0;
+$sc-paragraph-margin-bottom: $sc-margin-lv2;
 
 // Font variables for h1 elements
 $sc-h1-font-family: $sc-font-family; /* editable({"type": "string", "label": "Font family"}) */
@@ -20,7 +23,7 @@ $sc-h1-text-decoration: none;
 $sc-h1-line-height: 1.2; /* editable({"type": "string", "label": "Line height"}) */
 $sc-h1-letter-spacing: 0;
 $sc-h1-margin-top: 0;
-$sc-h1-margin-bottom: 0;
+$sc-h1-margin-bottom: $sc-margin-lv2;
 $sc-h1-text-transform: none; /* editable({
 	"type": "string",
 	"label": "Text transform",
@@ -41,7 +44,7 @@ $sc-h2-text-decoration: none;
 $sc-h2-line-height: 1.2; /* editable({"type": "string", "label": "Line height"}) */
 $sc-h2-letter-spacing: 0;
 $sc-h2-margin-top: 0;
-$sc-h2-margin-bottom: 0;
+$sc-h2-margin-bottom: $sc-margin-lv2;
 $sc-h2-text-transform: none; /* editable({
 	"type": "string",
 	"label": "Text transform",
@@ -62,7 +65,7 @@ $sc-h3-text-decoration: none;
 $sc-h3-line-height: 1.2;
 $sc-h3-letter-spacing: 0; /* editable({"type": "string", "label": "Line height"}) */
 $sc-h3-margin-top: 0;
-$sc-h3-margin-bottom: 0;
+$sc-h3-margin-bottom: $sc-margin-lv2;
 $sc-h3-text-transform: none; /* editable({
 	"type": "string",
 	"label": "Text transform",
@@ -83,7 +86,7 @@ $sc-h4-text-decoration: none;
 $sc-h4-line-height: 1.4; /* editable({"type": "string", "label": "Line height"}) */
 $sc-h4-letter-spacing: 0;
 $sc-h4-margin-top: 0;
-$sc-h4-margin-bottom: 0;
+$sc-h4-margin-bottom: $sc-margin-lv2;
 $sc-h4-text-transform: none; /* editable({
 	"type": "string",
 	"label": "Text transform",
@@ -104,7 +107,7 @@ $sc-h5-text-decoration: none;
 $sc-h5-line-height: 1.4; /* editable({"type": "string", "label": "Line height"}) */
 $sc-h5-letter-spacing: 0;
 $sc-h5-margin-top: 0;
-$sc-h5-margin-bottom: 0;
+$sc-h5-margin-bottom: $sc-margin-lv2;
 $sc-h5-text-transform: none; /* editable({
 	"type": "string",
 	"label": "Text transform",

@@ -1,11 +1,15 @@
 <div class="header-sidebar-wrapper">
 	<div class="header-sidebar-profile-menu" data-view="Header.Profile"></div>
 
+	<div data-type="header-sidebar-menu" class="sidebar-home-link-container">
+		<a href="/" data-touchpoint="home" class="sidebar-home-link">Home</a>
+	</div>
+
 	<div class="header-sidebar-menu-wrapper" data-type="header-sidebar-menu">
 
 		<ul class="header-sidebar-menu">
-		    {{#unless isStandalone}}
-			{{#each categories}}
+
+			{{#each sidebarCategories}}
 				{{#if text}}
 					<li>
 						<a {{objectToAtrributes this}} {{#if categories}}data-action="push-menu"{{/if}} name="{{text}}">
@@ -63,15 +67,12 @@
 					</li>
 				{{/if}}
 			{{/each}}
-			{{/unless}}
 
 			{{#if showExtendedMenu}}
 				<li class="header-sidebar-menu-myaccount" data-view="Header.Menu.MyAccount"></li>
 			{{/if}}
-			{{#unless isStandalone}}
 			<li data-view="QuickOrderHeaderLink"></li>
 			<li data-view="RequestQuoteWizardHeaderLink"></li>
-			{{/unless}}
 		</ul>
 
 	</div>

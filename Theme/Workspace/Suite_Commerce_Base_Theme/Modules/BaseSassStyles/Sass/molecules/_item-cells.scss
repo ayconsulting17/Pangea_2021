@@ -13,9 +13,13 @@
 
 .item-cell-title {
 	@extend .xsmall-title-navigable;
-	padding: $sc-padding-lv2 0;
+	padding: 3px 0 0 0;
 	display: block;
 	text-align: left;
+	border-top: 1px solid $sapphire;
+	font-weight: $sc-font-weight-semibold;
+	font-size: $sc-font-size-xl;
+	line-height: 1.1;
 }
 
 .item-cell-price {
@@ -33,6 +37,17 @@
 
 .item-cell-rate-empty {
 	@extend .icon-star;
+}
+
+.product-type {
+	font-weight: $sc-font-weight-bold;
+	color: $silver-chalice;
+	padding: $sc-padding-base 0;
+	margin-bottom: 0;
+}
+.product-desc {
+	color: $silver-chalice;
+	line-height: 1.2;
 }
 
 ///////////////////////////////////////////////////////////////
