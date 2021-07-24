@@ -7,6 +7,10 @@
         "account": "5035704_SB2",
         "hostname": "5035704-SB2.restlets.api.netsuite.com",
         "website": 2,
+        "target_folder": {
+            "parentId": "-15",
+            "folderName": "Deploy_Extensions"
+        },
         "domain": "sca2021.pangeaaudio.com",
         "webapp_id": "59656",
         "ssp_folder": "59656",
