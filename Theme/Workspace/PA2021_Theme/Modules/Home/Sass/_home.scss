@@ -51,7 +51,19 @@ $sc-image-slider-max-width-mobile: 767px;
     float:right;
     margin: 0 $sc-margin-lv1 * 12 0 0;
     width:350px;
-    padding: $sc-margin-lv6;
+    padding: 0 $sc-margin-lv6;
+
+    height: 400px;
+    line-height: 400px;
+
+    > img {
+      max-height: 340px;
+      vertical-align: middle;
+    }
+  }
+
+  > img {
+    max-height: 300px;
   }
 }
 
@@ -128,7 +140,6 @@ $sc-image-slider-max-width-mobile: 767px;
     float:left;
     @media (min-width: $screen-sm-min) {
       max-width:100%;
-      width: 100%;
       float: none;
     }
   }
@@ -179,7 +190,6 @@ $sc-image-slider-max-width-mobile: 767px;
 }
 
 .home-slide-main-container{
-  background:$sc-color-theme-background;
   overflow:hidden;
   height:400px;
   text-align:center;
@@ -203,24 +213,49 @@ $sc-image-slider-max-width-mobile: 767px;
     position: relative;
   }
 
+  &.dark {
+    h2.home-slide-caption-title, p {
+
+    }
+    h2.home-slide-caption-title {
+      text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    }
+    p {
+      text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    }
+  }
+  &.light {
+    h2.home-slide-caption-title, p {
+      color: #fff;
+
+    }
+    h2.home-slide-caption-title {
+      text-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+    }
+    p {
+      text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+    }
+  }
+
   h2.home-slide-caption-title{
       margin-bottom:$sc-margin-lv2;
       font-size:$sc-font-size-m * 2.66;
       line-height: $sc-font-size-m * 2.66;
-      color:$sc-color-secondary;
+      text-transform: uppercase;
+      font-weight: $sc-font-weight-bold;
+
       @media (min-width: $screen-sm-min){
           margin-bottom:$sc-margin-lv4;
       }
   }
   p{
     display:none;
+
     @media (min-width: $screen-xs-min){
       display:block;
       margin-bottom:$sc-margin-lv4;
-      color:$sc-color-theme-700;
       font-size:$sc-font-size-xl;
       text-transform:uppercase;
-      font-weight:$sc-font-weight-light;
     }
     @media (min-width: $screen-sm-min){
       font-size:$sc-font-size-xl;
@@ -251,6 +286,39 @@ $sc-image-slider-max-width-mobile: 767px;
       position:relative;
     }
   }
+}
+
+.custom-bucket {
+  @extend .col-xs-12;
+  @extend .col-sm-4;
+
+  @media (max-width: $screen-xs-max) {
+    .home-banner-main-cell-bg {
+      text-align: center;
+      display: block;
+    }
+  }
+
+  .title {
+    font-size: $sc-font-size-xxxl;
+    color: $sapphire;
+    font-family: 'Ubuntu', sans-serif;
+    border-bottom: 2px solid $sapphire;
+    margin-bottom: $sc-margin-lv2;
+  }
+  .text {
+    color: $true-gray;
+    line-height: $sc-font-size-l;
+    font-weight: $sc-font-weight-light;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.testimonials-wrapper {
+  background: $gallery;
 }
 
 

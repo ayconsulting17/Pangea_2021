@@ -1,7 +1,10 @@
 footer {
     background: $sc-footer-background-color;
-    border-top: 1px solid $sc-footer-border-color;
     color: $sc-footer-text-color;
+
+    p, a, button, li {
+        font-size: $sc-font-size-l;
+    }
 
     p {
         color: $sc-footer-text-color;
@@ -30,6 +33,7 @@ footer {
         margin: 0;
         margin-right: $sc-margin-lv2;
         font-weight: 300;
+        float: none;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -74,4 +78,136 @@ footer {
 
 .footer-content-col2 {
     @extend .col-md-2;
+}
+
+.footer-block {
+    display: inline-block;
+    vertical-align: top;
+    border-left: 1px solid $viking;
+    padding: $sc-padding-lv2 $sc-padding-lv4 $sc-padding-lv2 $sc-padding-base * 9;
+    margin: $sc-margin-lv6 $sc-margin-lv4 $sc-margin-lv8 $sc-margin-lv4;
+
+    &:first-child {
+        border-left: none;
+    }
+
+    ul {
+        padding: 0;
+        width: 100%;
+    }
+
+    a {
+        margin-right: 0;
+    }
+
+    p, a, li {
+        color: $lochmara;
+    }
+
+    h3 {
+        margin-bottom: $sc-margin-lv1;
+    }
+
+    &.contact-block {
+        .sprite-icon {
+            margin-right: $sc-margin-lv3;
+            margin-left: $sc-margin-base;
+        }
+        li {
+            margin-bottom: $sc-margin-base;
+        }
+    }
+
+    &.address-block {
+        p {
+            line-height: 1.2;
+        }
+    }
+    @media(min-width: $screen-sm-min) {
+        height: 120px;
+    }
+
+    @media(max-width: $screen-md-max) {
+        width: 24%;
+        margin: $sc-margin-lv6 0 $sc-margin-lv8 0;
+        padding: $sc-padding-lv2 $sc-padding-base $sc-padding-lv2 $sc-padding-lv3;
+    }
+    @media(max-width: $screen-xs-max) {
+        width: 48%;
+        border: none;
+        margin-bottom: 0;
+    }
+    @media(max-width: $screen-xs-min) {
+        width: 100%;
+        height: auto;
+        margin-top: $sc-margin-lv2;
+    }
+}
+
+.sprite-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/footer-sprite-trans.png');
+    margin-bottom: -3px;
+
+    &.phone {
+
+    }
+    &.fax {
+        background-position-x: -25px;
+    }
+    &.mail {
+        background-position-x: -50px;
+    }
+    &.pin {
+        background-position-x: -72px;
+    }
+    &.login {
+        background-position-x: -100px;
+    }
+}
+
+
+#footer-login {
+    padding: $sc-padding-lv2 $sc-padding-lv6;
+    border-radius: 8px;
+    border: 1px solid $viking;
+    display: block;
+    font-weight: $sc-font-weight-bold;
+    max-width: 140px;
+
+    &:hover, &:focus, &:active {
+        background: $sapphire;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        margin: $sc-margin-lv4 auto 0;
+    }
+    margin-top: $sc-margin-lv4;
+
+}
+
+.footer-divider {
+    width: 75%;
+    height: 1px;
+    background: $viking;
+    margin: $sc-margin-lv4 auto 0;
+    display: none;
+    clear: both;
+
+    @media (max-width: $screen-xs-min) {
+        display: block;
+    }
+}
+
+.social-media-container{
+    text-align: center;
+    margin-top: -15px;
+}
+
+.social-icons{
+    width:30px;
+    margin-right:10px;
+    cursor:pointer;
 }

@@ -279,7 +279,7 @@ node_modules/
 **/*.DesktopClient/ModelManifest.xml
 **/*.Server/GeneratedArtifacts
 **/*.Server/ModelManifest.xml
-_Pvt_Extensions
+_Pvt_Extensionss
 
 # Paket dependency manager
 .paket/paket.exe
@@ -329,19 +329,19 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-/Extension/gulp
-/Extension/ns_npm_repository
-/Extension/Workspace/Extras
-/Extension/package.json
-/Extension/package-lock.json
-/Extension/gulpfile.js
-/Extension/distro.json
-/Extension/LocalDistribution/**
-/Extension/.yo-rc.json
-/Extension/javascript-libs.js
-/Extension/DeployDistribution/**
+/Extensions/gulp
+/Extensions/ns_npm_repository
+/Extensions/Workspace/Extras
+/Extensions/package.json
+/Extensions/package-lock.json
+/Extensions/gulpfile.js
+/Extensions/distro.json
+/Extensions/LocalDistribution/**
+/Extensions/.yo-rc.json
+/Extensions/javascript-libs.js
+/Extensions/DeployDistribution/**
 
-Extension/ns_npm_repository
+Extensions/ns_npm_repository
 
 /Theme/ns_npm_repository
 /Theme/gulp
@@ -379,5 +379,5 @@ Extension/ns_npm_repository
 /default.sublime-project
 /.nsdeploy
 /LocalDistribution
-/Extension/tmp/
-Extension/tmp/
+/Extensions/tmp/
+Extensions/tmp/

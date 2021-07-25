@@ -323,7 +323,7 @@ const net_module = {
                     deploy.info.hostname = args.vm.replace(/https?:\/\//, '');
                 } else {
                     const molecule = args.m ? `${args.m}.` : '';
-                    deploy.info.hostname = `${account}.restlets.api.${molecule}netsuite.com`;
+                    deploy.info.hostname = `${account.replace('_','-')}.restlets.api.${molecule}netsuite.com`;
                 }
 
                 log(

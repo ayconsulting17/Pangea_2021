@@ -1,0 +1,56 @@
+{
+    "name": "FooterExtension",
+    "fantasyName": "FooterExtension",
+    "vendor": "Salora",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=21.1.0",
+        "SCS": ">=21.1.0"
+    },
+    "version": "1.0.0",
+    "description": " ",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/FooterExtension/Configuration/FooterExtension.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/FooterExtension/JavaScript/Salora.FooterExtension.js",
+            "myaccount": "Modules/FooterExtension/JavaScript/Salora.FooterExtension.js",
+            "checkout": "Modules/FooterExtension/JavaScript/Salora.FooterExtension.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/FooterExtension/JavaScript/Salora.FooterExtension.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/FooterExtension/JavaScript/Salora.FooterExtension.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/FooterExtension/JavaScript/Salora.FooterExtension.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

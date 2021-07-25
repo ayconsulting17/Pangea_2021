@@ -1,0 +1,46 @@
+{
+    "name": "Moment",
+    "fantasyName": "Moment",
+    "vendor": "JHM",
+    "version": "2.22.2",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "description": "Moment.js",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Moment/JavaScript/Moment.js",
+            "myaccount": "Modules/Moment/JavaScript/Moment.js",
+            "checkout": "Modules/Moment/JavaScript/Moment.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Moment/JavaScript/Moment.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Moment/JavaScript/Moment.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Moment/JavaScript/Moment.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace/Moment"
+}

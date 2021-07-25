@@ -343,7 +343,7 @@ class OAuth1 {
 
     async _step3(account, token, verifier, secret) {
         const params = { account, token, verifier, secret };
-        return this._baseStep(`${this.vm ? '' : account}${this.urls.step3}`, params);
+        return this._baseStep(`${this.vm ? '' : account.replace('_','-')}${this.urls.step3}`, params);
     }
 
     async issueToken(tokenName, requestConfig = {}) {

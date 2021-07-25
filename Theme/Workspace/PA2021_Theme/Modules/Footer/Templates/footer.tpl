@@ -1,32 +1,65 @@
 <div data-view="Global.BackToTop"></div>
 <div class="footer-content">
 
-	<div id="banner-footer1" class="footer-content-col2">
-		<div data-cms-area="global_banner_footer1" data-cms-area-filters="global">
-		
-		</div>
-	</div>
-	<div id="banner-footer2" class="footer-content-col2">
-		<div data-cms-area="global_banner_footer2" data-cms-area-filters="global">
-		
-		</div>
-	</div>
-	<div id="banner-footer3" class="footer-content-col2">
-		<div data-cms-area="global_banner_footer3" data-cms-area-filters="global">
-		
-		</div>
-	</div>
-	<div id="banner-footer4" class="footer-content-col2">
-		<div data-cms-area="global_banner_footer4" data-cms-area-filters="global">
-	
-		</div>
+	<!--<div id="banner-footer" class="content-banner banner-footer" data-cms-area="global_banner_footer" data-cms-area-filters="global"></div>-->
+
+	<div class="footer-block address-block">
+		<h3>Address <span class="sprite-icon pin"></span></h3>
+		<p>{{address1}}<br />{{address2}}</p>
+		<div class="footer-divider"></div>
 	</div>
 
-	<div id="banner-footer5" class="footer-content-col4">
-		<div data-cms-area="global_banner_footer5" data-cms-area-filters="global">
-		
-		</div>
+	<div class="footer-block contact-block">
+		<h3>Contact</h3>
+		<ul>
+			<li><span class="sprite-icon phone"></span>{{phone}}</li>
+			<li><span class="sprite-icon fax"></span>{{fax}}</li>
+			<li><span class="sprite-icon mail"></span><a href="mailto:{{email}}">{{email}}</a></li>
+		</ul>
+		<div class="footer-divider"></div>
 	</div>
+
+	<div class="footer-block">
+		<h3>Information</h3>
+		<ul>
+			{{#each footerNavigationLinks}}
+			<li>
+				<a {{objectToAtrributes item}}>
+					{{text}}
+				</a>
+			</li>
+			{{/each}}
+		</ul>
+
+		{{#if showLogin}}
+			<a id="footer-login" href="#" data-touchpoint="login" data-hashtag="login-register">{{translate 'Login'}}
+				<span class="sprite-icon login"></span>
+			</a>
+		{{else}}
+			<a id="footer-login" href="#" data-touchpoint="customercenter" data-hashtag="overview">{{translate 'Profile'}}
+				<span class="sprite-icon login"></span>
+			</a>
+		{{/if}}
+	</div>
+
+
+
+
+	<div class="footer-block">
+
+		<div class="social-media-container">
+		<a href="https://www.facebook.com/pangeaaudio/">
+		<img class="social-icons" src="/site/img/facebook_icon.png">
+		</a>
+		<a href="https://www.instagram.com/pangeaaudio/?hl=en">
+		<img class="social-icons" src="/site/img/instagram_icon.png">
+		</a>
+		</div>
+
+		<img class="merchant-e" src="../../site/site_images/merchant-e-solutions.png" alt="Merchant e-Solutions" />
+	
+	</div>
+
 </div>
 
 
