@@ -10,10 +10,6 @@
         "target_folder": {
             "parentId": "-15",
             "folderName": "Deploy_Extensions"
-        },
-        "domain": "sca2021.pangeaaudio.com",
-        "webapp_id": "59656",
-        "ssp_folder": "59656",
-        "is_scis": false
+        }
     }
 }
