@@ -44,6 +44,22 @@
 	text-align:left;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .facets-item-cell-list-details {
 	text-align:center;
 }
@@ -56,6 +72,20 @@
 .facets-item-cell-list-title {
 	@extend .item-cell-title;
 	text-align:left;
+
+}
+
+.facets-item-cell-list-name{
+	color: #2E3C97;
+	font-size: 1.286rem;
+	line-height: 1.1;
+	padding: 10px 0 0px 0;
+	margin: 10px 0 0 0;
+	display: block;
+
+	&:hover{
+		color:#138CFF;
+	}
 }
 
 .facets-item-cell-list-price {

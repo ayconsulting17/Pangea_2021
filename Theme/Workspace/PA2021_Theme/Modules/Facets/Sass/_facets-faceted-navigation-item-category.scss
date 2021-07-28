@@ -8,8 +8,9 @@
 }
 
 .facets-faceted-navigation-item-category-optionlist-extra-button {
-	@extend .button-tertiary;
+	@extend .button-secondary;
 	@extend .button-small;
+	margin: $sc-margin-lv2 0;
 }
 
 .facets-faceted-navigation-item-category-facet-group {

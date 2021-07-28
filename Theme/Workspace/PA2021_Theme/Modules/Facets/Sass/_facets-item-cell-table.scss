@@ -83,6 +83,22 @@
 
 .facets-item-cell-table-title {
 	@extend .item-cell-title;
+
+
+
+	color: #2E3C97;
+	font-size: 1.286rem;
+	line-height: 1.1;
+	padding: 10px 0 0px 0;
+	margin: 10px 0 0 0;
+
+	&:hover{
+		color:#138CFF;
+	}
+
+	a{
+	color: #2E3C97;
+	}
 }
 
 .facets-item-cell-table-price {

@@ -1,8 +1,7 @@
-<div class="facets-item-cell-grid" data-type="item" data-item-id="{{itemId}}" itemprop="itemListElement" data-track-productlist-list="{{track_productlist_list}}" data-track-productlist-category="{{track_productlist_category}}" data-track-productlist-position="{{track_productlist_position}}" data-sku="{{sku}}">
+<div class="facets-item-cell-grid" data-type="item" data-item-id="{{itemId}}" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/Product" data-track-productlist-list="{{track_productlist_list}}" data-track-productlist-category="{{track_productlist_category}}" data-track-productlist-position="{{track_productlist_position}}" data-sku="{{sku}}">
 	<meta itemprop="url" content="{{url}}"/>
 
 	<div class="facets-item-cell-grid-image-wrapper">
-		<div data-view="ItemThumbnail"></div>
 		<a class="facets-item-cell-grid-link-image" href="{{url}}">
 			<img class="facets-item-cell-grid-image" src="{{resizeImage thumbnail.url 'thumbnail'}}" alt="{{thumbnail.altimagetext}}" itemprop="image"/>
 		</a>
@@ -21,17 +20,20 @@
 			<span itemprop="name">{{name}}</span>
 		</a>
 
-		<div class="facets-item-cell-grid-price" data-view="ItemViews.Price">
-		</div>
+		<p class="product-type">{{productType}}</p>
+		{{!-- <p class="product-desc">{{{description}}}</p> --}}
 
-		{{#if showRating}}
-			<div class="facets-item-cell-grid-rating" itemprop="aggregateRating" data-view="GlobalViews.StarRating">
-			</div>
-		{{/if}}
+		<!--<div class="facets-item-cell-grid-price" data-view="ItemViews.Price">-->
+		<!--</div>-->
+
+		<!--{{#if showRating}}-->
+			<!--<div class="facets-item-cell-grid-rating" itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating" data-view="GlobalViews.StarRating">-->
+			<!--</div>-->
+		<!--{{/if}}-->
 
 		<div data-view="ItemDetails.Options"></div>
 
-		<div data-view="Cart.QuickAddToCart"></div>
+		<!--<div data-view="Cart.QuickAddToCart"></div>-->
 
 		<div class="facets-item-cell-grid-stock">
 			<div data-view="ItemViews.Stock" class="facets-item-cell-grid-stock-message"></div>
@@ -45,8 +47,8 @@
 
 
 {{!----
-Use the following context variables when customizing this template:
-
+Use the following context variables when customizing this template: 
+	
 	itemId (Number)
 	name (String)
 	url (String)

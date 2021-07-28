@@ -1,0 +1,39 @@
+{
+    "name": "FacetsExtension",
+    "fantasyName": "FacetsExtension",
+    "vendor": "Salora",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=21.1.0",
+        "SCS": ">=21.1.0"
+    },
+    "version": "1.0.0",
+    "description": " ",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/FacetsExtension/JavaScript/Salora.FacetsExtension.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/FacetsExtension/JavaScript/Salora.FacetsExtension.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

@@ -6,7 +6,7 @@
 			<h3 class="facets-faceted-navigation-item-category-title">{{parentName}}</h3>
 		</div>
 	{{else}}
-		<a href="#" class="facets-faceted-navigation-item-category-facet-group-expander" data-toggle="collapse" data-target="#{{htmlId}}-category-wrapper" data-type="collapse" title="{{translate 'Category'}}">
+		<a href="#" class="facets-faceted-navigation-item-category-facet-group-expander" data-toggle="collapse" data-target="#{{htmlId}} .facets-faceted-navigation-item-category-facet-group-wrapper" data-type="collapse" title="{{translate 'Category'}}">
 			<i class="facets-faceted-navigation-item-category-facet-group-expander-icon"></i>
 			<h3 class="facets-faceted-navigation-item-category-title">{{parentName}}</h3>
 		</a>
@@ -14,7 +14,7 @@
 
 	<div class="facets-faceted-navigation-item-category-facet-group" data-type="rendered-facet" data-facet-id="{{facetId}}"  id="{{htmlId}}">
 
-		<div class="{{#if isCollapsed}} collapse {{else}} collapse in {{/if}} facets-faceted-navigation-item-category-facet-group-wrapper" id="{{htmlId}}-category-wrapper">
+		<div class="{{#if isCollapsed}} collapse {{else}} collapse in {{/if}} facets-faceted-navigation-item-category-facet-group-wrapper">
 			<div class="facets-faceted-navigation-item-category-facet-group-content">
 				<ul class="facets-faceted-navigation-item-category-facet-optionlist">
 					{{#each displayValues}}
@@ -60,8 +60,8 @@
 
 
 {{!----
-Use the following context variables when customizing this template:
-
+Use the following context variables when customizing this template: 
+	
 	htmlId (String)
 	facetId (String)
 	showFacet (Boolean)

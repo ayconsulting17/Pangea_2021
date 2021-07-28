@@ -13,7 +13,7 @@
 					</h4>
 				</div>
 			{{else}}
-				<a href="#" class="facets-faceted-navigation-item-facet-group-expander" data-toggle="collapse" data-target="#{{htmlId}}-wrapper" data-type="collapse" title="{{facetDisplayName}}">
+				<a href="#" class="facets-faceted-navigation-item-facet-group-expander" data-toggle="collapse" data-target="#{{htmlId}} .facets-faceted-navigation-item-facet-group-wrapper" data-type="collapse" title="{{facetDisplayName}}">
 					<i class="facets-faceted-navigation-item-facet-group-expander-icon"></i>
 					<h4 class="facets-faceted-navigation-item-facet-group-title">{{facetDisplayName}}</h4>
 					{{#if showRemoveLink}}
@@ -25,7 +25,7 @@
 			{{/if}}
 		{{/if}}
 
-		<div class="{{#if isCollapsed}} collapse {{else}} collapse in {{/if}} facets-faceted-navigation-item-facet-group-wrapper" id="{{htmlId}}-wrapper">
+		<div class="{{#if isCollapsed}} collapse {{else}} collapse in {{/if}} facets-faceted-navigation-item-facet-group-wrapper">
 			<div class="facets-faceted-navigation-item-facet-group-content">
 				<ul class="facets-faceted-navigation-item-facet-optionlist">
 					{{#each displayValues}}

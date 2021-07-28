@@ -12,7 +12,9 @@
 					<div data-view="Facets.CategorySidebar" class="facets-facet-browse-facets-sidebar"></div>
 				{{/if}}
 
-				<div data-view="Facets.FacetedNavigation" data-exclude-facets="commercecategoryname,category"></div>
+				{{#if displayFacetNavigation}}
+					<div data-view="Facets.FacetedNavigation" data-exclude-facets="commercecategoryname,category"></div>
+				{{/if}}
 
 				<div data-cms-area="facet_navigation_bottom" data-cms-area-filters="page_type"></div>
 			</div>
@@ -22,7 +24,7 @@
 			properly <div data-view="Facets.FacetedNavigation.Item" data-facet-id="custitem1"></div>
 			 -->
 
-			<div class="facets-facet-browse-results">
+			<div class="facets-facet-browse-results" itemscope="" itemtype="https://schema.org/ItemList">
 
 				{{#if isCategory}}
 					<div class="facets-facet-browse-category">
@@ -69,8 +71,10 @@
 									<div class="facets-facet-browse-list-header-filter-column" data-view="Facets.ItemListShowSelector">
 									</div>
 
-									<div class="facets-facet-browse-list-header-filter-column" data-view="Facets.ItemListSortSelector">
-									</div>
+									{{#if displayFacetNavigation}}
+										<div class="facets-facet-browse-list-header-filter-column" data-view="Facets.ItemListSortSelector">
+										</div>
+									{{/if}}
 
 									{{#if hasItemsAndFacets}}
 										<div class="facets-facet-browse-list-header-filter-column">

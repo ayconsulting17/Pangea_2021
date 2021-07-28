@@ -1,7 +1,6 @@
-<div class="facets-item-cell-table" itemprop="itemListElement"  data-item-id="{{itemId}}" data-track-productlist-list="{{track_productlist_list}}" data-track-productlist-category="{{track_productlist_category}}" data-track-productlist-position="{{track_productlist_position}}" data-sku="{{sku}}">
+<div class="facets-item-cell-table" itemprop="itemListElement"  data-item-id="{{itemId}}" itemscope itemtype="https://schema.org/Product" data-track-productlist-list="{{track_productlist_list}}" data-track-productlist-category="{{track_productlist_category}}" data-track-productlist-position="{{track_productlist_position}}" data-sku="{{sku}}">
 	<meta itemprop="url" content="{{url}}">
 	<div class="facets-item-cell-table-image-wrapper">
-		<div data-view="ItemThumbnail"></div>
 		<a class="facets-item-cell-table-link-image" href="{{url}}">
 			<img class="facets-item-cell-table-image" src="{{resizeImage thumbnail.url 'thumbnail'}}" alt="{{thumbnail.altimagetext}}" itemprop="image">
 		</a>
@@ -22,18 +21,21 @@
 				</span>
 			</a>
 		</h2>
-		<div class="facets-item-cell-table-price">
-			<div data-view="ItemViews.Price"></div>
-		</div>
 
-		{{#if showRating}}
-		<div class="facets-item-cell-table-rating" itemprop="aggregateRating" data-view="GlobalViews.StarRating">
-		</div>
-		{{/if}}
+		<p class="product-type">{{productType}}</p>
+		<p class="product-desc">{{{description}}}</p>
+		<!--<div class="facets-item-cell-table-price">-->
+			<!--<div data-view="ItemViews.Price"></div>-->
+		<!--</div>-->
+
+		<!--{{#if showRating}}-->
+		<!--<div class="facets-item-cell-table-rating" itemprop="aggregateRating" itemscope="" itemtype="https://schema.org/AggregateRating"  data-view="GlobalViews.StarRating">-->
+		<!--</div>-->
+		<!--{{/if}}-->
 
 		<div data-view="ItemDetails.Options"></div>
 
-		<div data-view="Cart.QuickAddToCart"></div>
+		<!--<div data-view="Cart.QuickAddToCart"></div>-->
 
 		<div class="facets-item-cell-table-stock">
 			<div data-view="ItemViews.Stock" class="facets-item-cell-table-stock-message"></div>

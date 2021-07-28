@@ -23,6 +23,9 @@
 .facets-item-cell-grid-image-wrapper {
 	position:relative;
 	text-align:center;
+
+	// TODO: Temp solution, may revisit later
+	height: 190px;
 }
 
 
@@ -50,6 +53,15 @@
 
 .facets-item-cell-grid-title {
 	@extend .item-cell-title;
+	color: #2E3C97;
+	font-size: 1.286rem;
+	line-height: 1.1;
+	padding: 10px 0 0px 0;
+	margin: 10px 0 0 0;
+
+	&:hover{
+		color:#138CFF;
+	}
 }
 
 .facets-item-cell-grid-price {
