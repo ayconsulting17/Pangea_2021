@@ -5,14 +5,32 @@ define(
 	'underscore'
 ,	'Utils'
 ,	'Facets.ItemCell.View'
+,	'ItemsSearcher.Item.View'
+,	'ProductViews.Price.View'
 	]
 ,   function (
 	_
 ,	Utils
 ,	FacetsItemCellView
+,	ItemsSearcherItemView	
+,	ProductViewsPriceView
 	)
 {
 	'use strict';
+
+	_.extend(ItemsSearcherItemView.prototype, {
+
+		childViews: _.extend({}, ItemsSearcherItemView.prototype.childViews, {
+
+			'ItemPrice': function ()
+			{
+				return new ProductViewsPriceView({
+					model: this.model
+				,	origin: 'ITEMCELL'
+				});
+			}
+		}) // End childViews
+	}) // End extend module
 
 	return  {
 		mountToApp: function mountToApp (container)

@@ -7,7 +7,10 @@
 	        <div class="itemssearcher-item-results-title">
 	            {{highlightKeyword model._name currentQuery}}
 	        </div>
-	        <div data-view="Global.StarRating"></div>
+			<div class="sku-container">
+				<div data-view="ItemPrice" class="search-price"></div>
+				<div class="sku">{{model.itemid}}</div>
+			</div>
 	    </div>
 	</a>
 {{else}}

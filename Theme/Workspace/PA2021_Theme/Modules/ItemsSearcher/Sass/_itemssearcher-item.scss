@@ -1,5 +1,17 @@
 .itemssearcher-item-results {
 	@extend .item-results;
+
+	.sku-container{
+		margin-top: 20px;
+	}
+
+	.search-price{
+		float:left;
+	}
+
+	.sku{
+		float:right;
+	}
 }
 
 .itemssearcher-item-results-image {
@@ -14,14 +26,14 @@
 	@extend .item-results-title;
 }
 .itemssearcher-item-all-results {
-	@extend .all-results
+	@extend .all-results;
 }
 .itemssearcher-item-no-results {
-	@extend .no-results
+	@extend .no-results;
 }
 .itemssearcher-item-searching {
-	@extend .searching
+	@extend .searching;
 }
 .itemssearcher-item-shadow {
-	@extend .tt-menu-shadow-fix
+	@extend .tt-dropdown-menu-shadow-fix;
 }

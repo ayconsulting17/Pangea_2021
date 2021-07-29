@@ -188,17 +188,15 @@ input.nav-search-input {
     height: 3px;
 }
 
-
-.tt-menu-shadow-fix {
-    @include box-shadow(inset 0px 4px 6px -6px $sc-color-theme-700);
-    height: 3px;
-}
-
 .tt-suggestions{
     cursor:pointer;
     cursor:hand;
     padding:0;
     font-size: $sc-font-size-s;
+}
+
+.tt-dataset{
+    background:white;
 }
 
 .itemssearcher-input.tt-hint {
@@ -210,14 +208,16 @@ input.nav-search-input {
     display:block;
     border-bottom:1px solid $sc-color-theme-border-light;
     color: $sc-color-link;
-    padding-bottom: $sc-padding-lv4;
     font-size: $sc-font-size-m;
-    margin: $sc-margin-lv4 $sc-margin-lv7 0 $sc-margin-lv7;
+    padding:20px;
     text-transform: capitalize;
+    background: white;
+    cursor:pointer;
 
     &:hover {
         color: $sc-color-link-hover;
         text-decoration: underline;
+        background: #efefef;
     }
 }
 
@@ -242,6 +242,7 @@ input.nav-search-input {
     padding: $sc-padding-lv3 0;
     cursor: pointer;
     display: block;
+    background:white;
     @extend .clearfix;
 
     &:hover {
