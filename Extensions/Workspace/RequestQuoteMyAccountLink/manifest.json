@@ -1,15 +1,15 @@
 {
-    "name": "FacetsExtension",
-    "fantasyName": "FacetsExtension",
+    "name": "RequestQuoteMyAccountLink",
+    "fantasyName": "RequestQuoteMyAccountLink",
     "vendor": "Salora",
     "version": "1.0.0",
     "type": "extension",
-    "target": "SCA,SCS",
+    "target": "SCS,SCA",
     "target_version": {
-        "SCA": ">=21.1.0",
-        "SCS": ">=21.1.0"
+        "SCS": ">=21.1.0",
+        "SCA": ">=21.1.0"
     },
-    "description": " ",
+    "description": "",
     "skins": [],
     "assets": {
         "img": {
@@ -24,17 +24,17 @@
     },
     "javascript": {
         "entry_points": {
-            "shopping": "Modules/FacetsExtension/JavaScript/Salora.FacetsExtension.js"
+            "myaccount": "Modules/RequestQuoteMyAccountLink/JavaScript/RequestQuoteMyAccountLink.js"
         },
         "application": {
-            "shopping": {
+            "myaccount": {
                 "files": [
-                    "Modules/FacetsExtension/JavaScript/Salora.FacetsExtension.js"
+                    "Modules/RequestQuoteMyAccountLink/JavaScript/RequestQuoteMyAccountLink.js"
                 ]
             }
         }
     },
-    "local_folder": "Workspace/FacetsExtension",
+    "local_folder": "Workspace/RequestQuoteMyAccountLink",
     "suitescript2": {
         "files": []
     }

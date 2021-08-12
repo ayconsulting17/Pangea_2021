@@ -1,6 +1,6 @@
 {
-    "name": "FacetsExtension",
-    "fantasyName": "FacetsExtension",
+    "name": "LoginFailureMessage",
+    "fantasyName": "LoginFailureMessage",
     "vendor": "Salora",
     "version": "1.0.0",
     "type": "extension",
@@ -9,7 +9,7 @@
         "SCA": ">=21.1.0",
         "SCS": ">=21.1.0"
     },
-    "description": " ",
+    "description": "Custom Login Message Login|Register section.",
     "skins": [],
     "assets": {
         "img": {
@@ -22,19 +22,24 @@
             "files": []
         }
     },
+    "configuration": {
+        "files": [
+            "Modules/LoginFailureMessage/Configuration/LoginFailureMessage.json"
+        ]
+    },
     "javascript": {
         "entry_points": {
-            "shopping": "Modules/FacetsExtension/JavaScript/Salora.FacetsExtension.js"
+            "checkout": "Modules/LoginFailureMessage/JavaScript/Salora.LoginFailureMessage.js"
         },
         "application": {
-            "shopping": {
+            "checkout": {
                 "files": [
-                    "Modules/FacetsExtension/JavaScript/Salora.FacetsExtension.js"
+                    "Modules/LoginFailureMessage/JavaScript/Salora.LoginFailureMessage.js"
                 ]
             }
         }
     },
-    "local_folder": "Workspace/FacetsExtension",
+    "local_folder": "Workspace/LoginFailureMessage",
     "suitescript2": {
         "files": []
     }

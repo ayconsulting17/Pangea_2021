@@ -1,6 +1,6 @@
 {
-    "name": "FacetsExtension",
-    "fantasyName": "FacetsExtension",
+    "name": "HideQuoteExtension",
+    "fantasyName": "HideQuoteExtension",
     "vendor": "Salora",
     "version": "1.0.0",
     "type": "extension",
@@ -24,17 +24,17 @@
     },
     "javascript": {
         "entry_points": {
-            "shopping": "Modules/FacetsExtension/JavaScript/Salora.FacetsExtension.js"
+            "shopping": "Modules/HideQuoteButtons/JavaScript/HideQuoteButtons.js"
         },
         "application": {
             "shopping": {
                 "files": [
-                    "Modules/FacetsExtension/JavaScript/Salora.FacetsExtension.js"
+                    "Modules/HideQuoteButtons/JavaScript/HideQuoteButtons.js"
                 ]
             }
         }
     },
-    "local_folder": "Workspace/FacetsExtension",
+    "local_folder": "Workspace/HideQuoteExtension",
     "suitescript2": {
         "files": []
     }
