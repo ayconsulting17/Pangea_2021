@@ -4,6 +4,7 @@
 	margin-bottom: $sc-margin-lv3;
 	font-weight: $sc-font-weight-semibold;
 	position: relative;
+	background: $sapphire;
 
 	& > span {
 		font-weight: $sc-font-weight-normal;
@@ -28,4 +29,8 @@
 	@media (min-width: $screen-sm-min){
       display:none;
   	}
+}
+
+.addl-option {
+	margin-left: -$sc-margin-base;
 }

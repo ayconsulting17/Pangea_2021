@@ -40,7 +40,7 @@
 
 .content-tabs-title {
 	&.active a, &:hover a {
-		color: $sc-color-secondary;
+		color: black;
 		border-bottom: 2px solid $sc-color-theme-700;
 	}
 
@@ -52,7 +52,7 @@
 		padding: $sc-padding-lv3;
 		float: left;
 		font-size: $sc-font-size-xl;
-		color: $sc-color-copy-light;
+		color: black;
 		border-bottom: 2px solid $sc-color-theme-border-light;
 	}
 }
@@ -76,7 +76,7 @@
 		transition: all 0.5s ease;
 
 		overflow: hidden;
-		max-height: 400px;
+		max-height: 100%;
 
 		opacity: 0;
 		height: 0;

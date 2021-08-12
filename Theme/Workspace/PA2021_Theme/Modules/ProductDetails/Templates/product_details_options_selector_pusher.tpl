@@ -11,10 +11,12 @@
 			<i></i>
 
 			{{#each selectedOptions}}
-				{{#if @first}}
-					<span> {{label}} </span>
-				{{else}}
-					<span> , {{label}} </span>
+				{{#if label}}
+					{{#if @first}}
+						<span>{{label}}</span>
+					{{else}}
+						<span class="addl-option">, {{label}} </span>
+					{{/if}}
 				{{/if}}
 			{{/each}}
 		</button>

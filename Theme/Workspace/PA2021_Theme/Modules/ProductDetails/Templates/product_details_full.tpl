@@ -4,9 +4,16 @@
 	<header class="product-details-full-header">
 		<div id="banner-content-top" class="product-details-full-banner-top"></div>
 	</header>
-	<div class="product-details-full-divider-desktop"></div>
-	<article class="product-details-full-content" >
+
+	<article class="product-details-full-content" itemscope itemtype="https://schema.org/Product">
 		<meta itemprop="url" content="{{itemUrl}}">
+		<meta itemprop="brand" content="{{model.item.custitem_brand}}" />
+		<meta itemprop="description" content="{{model.item.featureddescription}}" />
+		<meta itemprop="mpn" content="{{model.item.itemid}}" />
+		<meta itemprop="name" content="{{model.item.displayname}}" />
+		{{#each seoImgArr}}
+			<meta itemprop="image" content="{{this}}" />
+		{{/each}}
 		<div id="banner-details-top" class="product-details-full-banner-top-details"></div>
 
 		<section class="product-details-full-main-content">
@@ -14,9 +21,13 @@
 
 				<div data-cms-area="product_details_full_cms_area_1" data-cms-area-filters="page_type"></div>
 
-				<h1 class="product-details-full-content-header-title" itemprop="name">{{pageHeader}}</h1>
-				<div class="product-details-full-rating" data-view="Global.StarRating"></div>
-				<div data-view="ItemDetails.Header"></div>
+				<div id="product-details-header-container">
+					<h2>{{category}}</h2>
+					<h1 class="product-details-full-content-header-title">{{model.item.displayname}}</h1>
+				</div>
+
+				<!--<div class="product-details-full-rating" data-view="Global.StarRating"></div>-->
+				<h3>{{model.item.custitem_jhm_product_type}}</h3>
 				<div data-cms-area="item_info" data-cms-area-filters="path"></div>
 			</div>
 			<div class="product-details-full-main-content-left">
@@ -54,21 +65,25 @@
 
 						{{#if isPriceEnabled}}
 							<div data-view="Quantity"></div>
-
+							
 							<section class="product-details-full-actions">
-
 								<div class="product-details-full-actions-container">
 									<div data-view="MainActionView"></div>
-									<div  data-view="ItemActions"></div>
-								</div>
-								<div class="product-details-full-actions-container">
-									<div data-view="AddToProductList" class="product-details-full-actions-addtowishlist"></div>
-
 									<div data-view="ProductDetails.AddToQuote" class="product-details-full-actions-addtoquote"></div>
-								</div>
 
+								</div>
 							</section>
 						{{/if}}
+
+						{{#if showComponents}}
+						<div class="components-container">
+							<div class="components-title">Components:</div>
+							<div class="kit-components"><a href="/{{model.item.custitem_kit_url_component_1}}">{{model.item.custitem_kit_display_name1}}</a></div>
+							<div class="kit-components"><a href="/{{model.item.custitem_kit_url_component_2}}">{{model.item.custitem_kit_display_name2}}</a></div>
+						</div>
+						{{/if}}
+
+						<div data-view="StateComplianceWarning"></div>
 
 						<div data-view="StockDescription"></div>
 
@@ -93,11 +108,31 @@
 
 		<section data-view="Product.Information"></section>
 
-		<div class="product-details-full-divider-desktop"></div>
+		<!--<section data-view="Product.Information"></section>-->
+		{{!-- <div id="product-details-custom-data">
+			<div id="full-desc">
+				{{{model.item.storedetaileddescription}}}
+			</div>
+			{{#if showDescToggle}}
+				<div class="button-container">
+					<a href="#" class="toggle-desc" data-action="toggle-expand" data-toggle-el="full-desc">See More</a>
+				</div>
+			{{/if}}
+			<div class="details technical-specs">
+				<h3>Technical Specifications</h3>
+				{{{model.item.featureddescription}}}
+			</div>
+			<div class="details">
+				<h3>Information</h3>
+				<div data-view="Manuals"></div>
+			</div>
+		</div> --}}
+
+		<!--<div class="product-details-full-divider-desktop"></div>-->
 
 		<div data-cms-area="product_details_full_cms_area_7" data-cms-area-filters="path"></div>
 
-		<div data-view="ProductReviews.Center"></div>
+		<!--<div data-view="ProductReviews.Center"></div>-->
 
 		<div data-cms-area="product_details_full_cms_area_8" data-cms-area-filters="path"></div>
 

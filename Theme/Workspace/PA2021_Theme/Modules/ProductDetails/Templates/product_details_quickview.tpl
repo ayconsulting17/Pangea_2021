@@ -30,15 +30,12 @@
 					<div data-view="Quantity.Pricing"></div>
 
 					{{#if isPriceEnabled}}
-						<div class="product-details-quickview-quantity" data-view="Quantity"></div>
+						<div data-view="Quantity"></div>
 
 						<section class="product-details-quickview-actions">
 
 							<div class="product-details-quickview-actions-container">
 								<div data-view="MainActionView"></div>
-							</div>
-							<div class="product-details-quickview-actions-container">
-								<div data-view="AddToProductList" class="product-details-quickview-actions-container-add-to-wishlist"></div>
 								<div data-view="ProductDetails.AddToQuote" class="product-details-quickview-actions-container-add-to-quote"></div>
 							</div>
 

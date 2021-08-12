@@ -28,7 +28,7 @@
 						{{!-- Tab Contents --}}
 						<div class="product-details-information-tab-content" data-type="information-content" data-action="tab-content">
 							{{#each details}}
-								<div role="tabpanel" class="product-details-information-tab-content-panel {{#if @first}}active{{/if}}" id="product-details-information-tab-{{@index}}" itemprop="{{itemprop}}" data-action="pushable" data-id="product-details-information-{{ @index }}">
+								<div role="tabpanel" class="product-details-information-tab-content-panel {{#if @first}}active{{/if}}" id="product-details-information-tab-{{@index}}" data-action="pushable" data-id="product-details-information-{{ @index }}">
 									{{#if ../showHeader}}<h2 class="product-details-information-tab-content-panel-title">{{name}}</h2>{{/if}}
 									<div id="product-details-information-tab-content-container-{{@index}}" class="product-details-information-tab-content-container" data-type="information-content-text">{{{content}}}</div>
 								</div>
@@ -63,3 +63,5 @@ Use the following context variables when customizing this template:
 	details (Array)
 
 ----}}
+
+{{log this}}
