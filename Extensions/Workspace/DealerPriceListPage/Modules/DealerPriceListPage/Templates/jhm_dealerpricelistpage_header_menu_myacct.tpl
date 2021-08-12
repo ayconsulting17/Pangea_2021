@@ -1,6 +1,3 @@
-
-<h1>HELLLLO</h1>
-
 <a class="header-menu-myaccount-anchor" href="#" data-action="push-menu" name="myaccount">
     {{translate 'My Account'}}
     <i class="header-menu-myaccount-menu-push-icon"></i>

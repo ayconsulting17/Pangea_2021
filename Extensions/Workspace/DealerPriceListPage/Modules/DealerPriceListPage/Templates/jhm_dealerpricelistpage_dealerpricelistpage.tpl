@@ -1,5 +1,3 @@
-
-<h1>HELLO</h1>
 <div class="dealer-price-list">
 
     <h2>{{dealerType}} Price Lists</h2>

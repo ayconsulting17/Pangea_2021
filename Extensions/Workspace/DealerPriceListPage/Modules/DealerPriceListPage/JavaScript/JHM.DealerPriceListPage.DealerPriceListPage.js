@@ -6,7 +6,7 @@ define('JHM.DealerPriceListPage.DealerPriceListPage'
 	,	'underscore'
 	,	'jhm_dealerpricelistpage_header_menu_myacct.tpl'
 	, 	'Header.Menu.MyAccount.View'
-
+	, 	'MyAccountMenu'
 	,	'Utils'
 	]
 ,   function
@@ -16,6 +16,8 @@ define('JHM.DealerPriceListPage.DealerPriceListPage'
 	,	_
 	,	jhm_dealerpricelistpage_header_menu_myacct_tpl
 	, 	HeaderMenuMyAccountView
+	,	MyAccountMenu
+	, 	Utils
 	)
 {
 	'use strict';
@@ -25,30 +27,23 @@ define('JHM.DealerPriceListPage.DealerPriceListPage'
 			template: jhm_dealerpricelistpage_header_menu_myacct_tpl
 		})
 
-		
-	
-
 	return  {
 		
 		mountToApp: function mountToApp(container)
 		{
-			return new DealerPriceListPageRouter(container);
-		}
-
-	,	MenuItems: function(application)
-		{
-			var returnObj;
+			var MyAccountMenuInstance = MyAccountMenu.getInstance();
+			var environment = container.getComponent('Environment');
 
 			if (SC.ENVIRONMENT.permissions.transactions.tranEstimate >= 2) {
-
-                returnObj = {
-                    id: 'dealer-price-list-page'
+			MyAccountMenuInstance.addEntry({
+					id: 'dealer-price-list-page'
 				,	name: _('Price Lists').translate()
 				,	url: 'dealer-price-lists'
-				,	index: 10                }
+				,	index: 10
+			});
 			}
 
-			return returnObj;
+			return new DealerPriceListPageRouter(container);
 		}
 	};
 });

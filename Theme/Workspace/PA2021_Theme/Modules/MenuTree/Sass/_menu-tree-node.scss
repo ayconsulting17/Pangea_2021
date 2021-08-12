@@ -12,10 +12,19 @@
 	cursor: pointer;
 	text-transform: uppercase;
 	font-weight: normal;
+	color: #fff;
+
+	&:hover, &:active {
+		color: $cyan;
+	}
+
+	&:focus, &:focus-within {
+		color: #fff;
+	}
 }
 
 .menu-tree-node-item-anchor.active{
-	color: $sc-color-copy-dark;
+	color: #fff;
 	font-weight: $sc-font-weight-semibold;
 }
 
@@ -29,7 +38,6 @@
 
 .open{
 	> .menu-tree-node-item-anchor{
-		color: $sc-color-copy-dark;
 		background-color: $sc-color-theme-background;
 	}
 
@@ -40,8 +48,6 @@
 
 .menu-tree-node-submenu-wrapper{
 	border-bottom: 1px solid  $sc-color-theme-border-light;
-	padding-top: $sc-padding-lv2;
-	padding-bottom: $sc-padding-lv2;
 	background-color: $sc-neutral-shade-0;
 
 	.menu-tree-node-item-anchor{
@@ -51,9 +57,14 @@
 		text-transform: none;
 		padding: $sc-padding-lv2 $sc-padding-lv4;
 		border-bottom:none;
+		color: $sc-color-copy-dark;
 
 		.active {
 			font-weight: bold;
+		}
+
+		&:hover, &:active {
+			background: $gallery;
 		}
 	}
 }
