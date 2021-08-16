@@ -53,11 +53,11 @@
 </div>
 <div class="testimonials-wrapper">
 	<div class="container">
-		{{!-- <div data-view="TestimonialsView"></div> --}}
+		<div data-view="TestimonialsView"></div>
 	</div>
 </div>
 <div class="container">
-	{{!-- <div data-view="NewsView"></div> --}}
+	<div data-view="NewsView"></div>
 </div>
 
 

@@ -6,8 +6,8 @@ define(
 		'underscore'
 	,	'SC.Configuration'
 	,	'Home.View'
-	,	'Footer.View'
-
+	,	'Testimonials.Homepage.View'
+	, 	'News.Homepage.View'
 	,	'Utils'
 	]
 ,   function
@@ -15,6 +15,8 @@ define(
 		_
 	,	Configuration
 	,	HomeView
+	, 	TestimonialsHomepageView
+	, 	NewsHomepageView
 
 	)
 {
@@ -23,13 +25,22 @@ define(
 	return  {
 		mountToApp: function mountToApp (container)
 		{
+
+			var layout = container.getComponent('Layout');
+
 			HomeView.prototype.getContext = _.wrap(HomeView.prototype.getContext, function (fn) {
 				var context = fn.apply(this, _.toArray(arguments).slice(1));	
-				console.log('context1244',context);
-				
 				context.customBuckets = Configuration.get('home.customBuckets', [])
 				context.customSliders = Configuration.get('home.customSliders', [])
 				return context;
+			});
+
+			layout.addChildView('TestimonialsView', function () {
+				return new TestimonialsHomepageView();
+			});
+
+			layout.addChildView('NewsView', function () {
+				return new NewsHomepageView();
 			});
 
 		}
