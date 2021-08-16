@@ -11,7 +11,7 @@
         "port": 7777
     },
     "fetchConfig": {
-        "extension": "ProductDetailsExtension"
+        "extension": "News"
     },
     "extensionMode": true,
     "preserveManifest": false,
@@ -37,8 +37,10 @@
             "Workspace/HomepageExtension",
             "Workspace/LoginFailureMessage",
             "Workspace/Moment",
+            "Workspace/News",
             "Workspace/ProductDetailsExtension",
-            "Workspace/RequestQuoteMyAccountLink"
+            "Workspace/RequestQuoteMyAccountLink",
+            "Workspace/Testimonials"
         ],
         "theme_path": "Workspace/Extras/PA2021_Theme",
         "overrides_path": "Workspace/Extras/PA2021_Theme/Overrides"
@@ -88,22 +90,10 @@
         "update": true,
         "chunk_size": 80
     },
-    "credentials": {
-        "user_agent": "sc-extension-devtools/2021.1.0",
-        "authID": "PANGEA_SB2",
-        "key": "446765bc51e70086cf582d32f0486fc0a764354ffec6c983b94e63af331346c4",
-        "secret": "97fda39654d2f0cf3f0f9011d97616f96a3136e2c7659b867e57a1e1bbbcc566",
-        "account": "5035704_SB2",
-        "hostname": "5035704-SB2.restlets.api.netsuite.com",
-        "website": 2,
-        "domain": "sca2021.pangeaaudio.com",
-        "webapp_id": "59656",
-        "ssp_folder": "59656",
-        "is_scis": false
-    },
+    "credentials": {},
     "nsdeployPath": ".nsdeploy",
     "_": [
-        "extension:local"
+        "extension:deploy"
     ],
     "product": "gulp",
     "$0": "gulp",
@@ -537,6 +527,81 @@
             "extension_id": "5401"
         },
         {
+            "name": "News",
+            "fantasyName": "News",
+            "vendor": "JHM",
+            "type": "extension",
+            "target": "SCA,SCS",
+            "version": "1.0.0",
+            "description": "News",
+            "assets": {
+                "img": {
+                    "files": []
+                },
+                "fonts": {
+                    "files": []
+                },
+                "services": {
+                    "files": [
+                        "services/News.Service.ss"
+                    ]
+                }
+            },
+            "configuration": {
+                "files": []
+            },
+            "templates": {
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/News/Templates/news_homepage.tpl",
+                            "Modules/News/Templates/news_homepage_single_item.tpl",
+                            "Modules/News/Templates/news_page.tpl",
+                            "Modules/News/Templates/news_single_item.tpl"
+                        ]
+                    }
+                }
+            },
+            "sass": {
+                "entry_points": {
+                    "shopping": "Modules/News/Sass/_news-news.scss"
+                },
+                "files": [
+                    "Modules/News/Sass/_news-news.scss",
+                    "Modules/News/Sass/_news.scss"
+                ]
+            },
+            "javascript": {
+                "entry_points": {
+                    "shopping": "Modules/News/JavaScript/JHM.News.News.js"
+                },
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/News/JavaScript/JHM.News.News.js",
+                            "Modules/News/JavaScript/News.Router.js",
+                            "Modules/News/JavaScript/News.Model.js",
+                            "Modules/News/JavaScript/News.Homepage.View.js",
+                            "Modules/News/JavaScript/News.Homepage.Single.View.js",
+                            "Modules/News/JavaScript/News.Page.View.js",
+                            "Modules/News/JavaScript/News.Single.View.js"
+                        ]
+                    }
+                }
+            },
+            "ssp-libraries": {
+                "entry_point": "Modules/News/SuiteScript/JHM.News.News.js",
+                "files": [
+                    "Modules/News/SuiteScript/JHM.News.News.js",
+                    "Modules/News/SuiteScript/News.ServiceController.js",
+                    "Modules/News/SuiteScript/News.Model.js"
+                ]
+            },
+            "path": "SuiteScripts/Deploy_Extensions/JHM/News@1.0.0",
+            "activation_id": "8",
+            "extension_id": "101"
+        },
+        {
             "name": "PA2021_Theme",
             "fantasyName": "PA2021_Theme",
             "vendor": "SALORAERP",
@@ -546,7 +611,7 @@
                 "SCA": ">=21.1.0",
                 "SCS": ">=21.1.0"
             },
-            "version": "1.5.0",
+            "version": "1.7.0",
             "description": "",
             "override": [],
             "skins": [
@@ -1903,9 +1968,9 @@
                     ]
                 }
             },
-            "path": "SuiteScripts/Deploy_Extensions/SALORAERP/PA2021_Theme@1.5.0",
+            "path": "SuiteScripts/Deploy_Extensions/SALORAERP/PA2021_Theme@1.7.0",
             "activation_id": "8",
-            "extension_id": "5502"
+            "extension_id": "5801"
         },
         {
             "name": "ProductDetailsExtension",
@@ -1949,6 +2014,79 @@
             "path": "SuiteScripts/Deploy_Extensions/Salora/ProductDetailsExtension@1.0.0",
             "activation_id": "8",
             "extension_id": "5601"
+        },
+        {
+            "name": "Testimonials",
+            "fantasyName": "Testimonials",
+            "vendor": "JHM",
+            "type": "extension",
+            "target": "SCA,SCS",
+            "version": "1.0.0",
+            "description": "Handles custom testimonial features",
+            "assets": {
+                "img": {
+                    "files": []
+                },
+                "fonts": {
+                    "files": []
+                },
+                "services": {
+                    "files": [
+                        "services/Testimonials.Service.ss"
+                    ]
+                }
+            },
+            "configuration": {
+                "files": []
+            },
+            "templates": {
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/Testimonials/Templates/testimonials_homepage.tpl",
+                            "Modules/Testimonials/Templates/testimonials_page.tpl",
+                            "Modules/Testimonials/Templates/testimonials_single.tpl"
+                        ]
+                    }
+                }
+            },
+            "sass": {
+                "entry_points": {
+                    "shopping": "Modules/Testimonials/Sass/_testimonials-testimonials.scss"
+                },
+                "files": [
+                    "Modules/Testimonials/Sass/_testimonials-testimonials.scss",
+                    "Modules/Testimonials/Sass/_testimonials.scss"
+                ]
+            },
+            "javascript": {
+                "entry_points": {
+                    "shopping": "Modules/Testimonials/JavaScript/JHM.Testimonials.Testimonials.js"
+                },
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/Testimonials/JavaScript/JHM.Testimonials.Testimonials.js",
+                            "Modules/Testimonials/JavaScript/Testimonials.Model.js",
+                            "Modules/Testimonials/JavaScript/Testimonials.Homepage.View.js",
+                            "Modules/Testimonials/JavaScript/Testimonials.Page.View.js",
+                            "Modules/Testimonials/JavaScript/Testimonials.Router.js",
+                            "Modules/Testimonials/JavaScript/Testimonials.Single.View.js"
+                        ]
+                    }
+                }
+            },
+            "ssp-libraries": {
+                "entry_point": "Modules/Testimonials/SuiteScript/JHM.Testimonials.Testimonials.js",
+                "files": [
+                    "Modules/Testimonials/SuiteScript/JHM.Testimonials.Testimonials.js",
+                    "Modules/Testimonials/SuiteScript/Testimonials.ServiceController.js",
+                    "Modules/Testimonials/SuiteScript/Testimonials.Model.js"
+                ]
+            },
+            "path": "SuiteScripts/Deploy_Extensions/JHM/Testimonials@1.0.0",
+            "activation_id": "8",
+            "extension_id": "301"
         }
     ],
     "to": true,
