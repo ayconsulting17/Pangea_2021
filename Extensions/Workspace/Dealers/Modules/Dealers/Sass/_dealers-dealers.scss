@@ -1,0 +1,177 @@
+/*
+	Sass Application Entry Point
+	Link all your sass dependencies in the right order
+
+	Example:
+	@import "other-sass-file.scss";
+	@import "../../<other module>/Sass/other-sass-file.scss";
+*/ 
+
+#dealers-page {
+  @extend .container;
+  position: relative;
+
+  .header-container {
+    border-bottom: 2px solid $sapphire;
+  }
+  h2 {
+    margin-top: 10px;
+    margin-left: 20px;
+    color:white;
+  }
+
+  .header {
+    font-weight: $sc-font-weight-bold;
+
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+  }
+
+  .dealer-info-link {
+    cursor: pointer;
+
+    &:hover, &:active, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .dealer-container {
+    width:100%;
+    @extend .container;
+    margin-bottom: $sc-margin-lv4;
+
+    // Each row displayed
+    > div {
+      @extend .row;
+      padding: $sc-padding-lv2 0;
+      border-top: 1px solid #ddd;
+
+      &:nth-child(odd) {
+        background: #f9f9f9;
+      }
+
+
+      // Each column displayed
+      > div {
+        @extend .col-md-2;
+
+        &.company, &.url {
+          @extend .col-md-3;
+        }
+
+        &.country {
+          width: 20%;
+        }
+
+        &.brands {
+          @extend .col-md-3;
+          font-weight: $sc-font-weight-bold;
+        }
+      }
+    }
+  }
+
+  ul#dealers-legend {
+
+    text-align: right;
+    font-weight: $sc-font-weight-bold;
+
+    li {
+      display: inline-block;
+      padding-left: $sc-padding-lv4;
+
+    }
+  }
+}
+
+#in-modal-dealer-info {
+
+  border-top: 1px solid #ddd;
+  width: 100%;
+
+  tr {
+    border-bottom: 1px solid #ddd;
+
+    &:nth-child(odd) {
+      background: #f9f9f9;
+    }
+
+    td:first-child {
+      font-weight: $sc-font-weight-bold;
+      width: 25%;
+    }
+
+    td {
+      padding: $sc-padding-lv3 0 $sc-padding-lv3 $sc-padding-lv2;
+    }
+  }
+
+
+}
+
+.dealer-info-link{
+color:#138cff;
+
+&:hover{
+  color: #0019ff;
+  text-decoration: underline;
+}
+
+}
+
+.header-text {
+  display:inline-block;
+  float:right;
+  margin-top: 10px;
+  color:black;
+}
+
+.header-title{
+  text-align: left;
+  display: inline-block;
+  margin-bottom:0px;
+}
+
+.brands-value{
+  width:30% !important; 
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.dealers-expander-toggle-icon {
+  @extend .fa;
+	@extend %fa-angle-up;
+  float: right;
+  height: 44px;
+  line-height: 44px;
+  font-size: 30px;
+  color: #fff;
+  -webkit-transition: transform 300ms ease;
+  -o-transition: transform 300ms ease;
+  transition: transform 300ms ease;
+  margin-top: -40px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.dealers-expander-head{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.dealers-expander-head-toggle{
+  background: #2E3C97;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px
+}
+
+.dealers-expander-head-toggle.collapsed .dealers-expander-toggle-icon {
+  transform:rotateX(0deg);
+  }
+  
+ .dealers-expander-toggle-icon {
+  transition:transform .5s;transform:rotateX(180deg);
+  }
