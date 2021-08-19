@@ -6,11 +6,13 @@
 	{{/if}}
 	<div class="facets-browse-category-heading-main-description">
 		<h1>{{pageheading}}</h1>
-		{{#if showDescription}}
 			<p>{{{description}}}</p>
-		{{/if}}
+		{{!-- {{#if showDescription}}
+			<p>{{{description}}}</p>
+		{{/if}} --}}
 	</div>
 </section>
+
 
 
 

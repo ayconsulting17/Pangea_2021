@@ -1,15 +1,15 @@
 
 
 .product-detail-to-quote-add-to-quote-button {
-	@extend .button-tertiary;
+	@extend .button-secondary;
 	@extend .button-large;
 	margin-top: $sc-margin-lv3;
 	margin-left: 0;
 	font-weight: $sc-font-weight-semibold;
 	width: 100%;
 	text-align:center;
-	cursor:pointer;
 	cursor:hand;
+	background:#84919D;
 }
 
 .product-detail-to-quote-loading {

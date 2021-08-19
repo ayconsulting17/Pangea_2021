@@ -10,8 +10,8 @@
 	</div>
 
 	{{#if showRating}}
-		<div class="item-relations-related-item-rate" data-view="Global.StarRating">
-		</div>
+		{{!-- <div class="item-relations-related-item-rate" data-view="Global.StarRating">
+		</div> --}}
 	{{/if}}
 </div>
 

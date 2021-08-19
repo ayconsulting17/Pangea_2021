@@ -35,10 +35,12 @@
 }
 
 .order-wizard-address-module-address-container{
-	background: $sc-color-theme-background;
-	clear:both;
-	display:block;
-	overflow:hidden;
+    background: white;
+    clear: both;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+	
 	.order-wizard-address-row:last-child {
 		margin-bottom: 0;
 	}

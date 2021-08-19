@@ -34,6 +34,11 @@ define('JHM.DealerPriceListPage.DealerPriceListPage'
 			var MyAccountMenuInstance = MyAccountMenu.getInstance();
 			var environment = container.getComponent('Environment');
 
+			var removeEntryIds = ['productlists', 'product_list_dummy'];
+			MyAccountMenuInstance.getEntries().forEach(function (entry, idx) {
+				if (removeEntryIds.indexOf(entry.id) !== -1) MyAccountMenuInstance.removeEntry(entry.id);
+			})
+
 			if (SC.ENVIRONMENT.permissions.transactions.tranEstimate >= 2) {
 			MyAccountMenuInstance.addEntry({
 					id: 'dealer-price-list-page'

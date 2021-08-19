@@ -11,7 +11,7 @@
         "port": 7777
     },
     "fetchConfig": {
-        "extension": "News"
+        "extension": "Manuals"
     },
     "extensionMode": true,
     "preserveManifest": false,
@@ -31,11 +31,14 @@
         "extensions_path": [
             "Workspace/BingAnalytics",
             "Workspace/DealerPriceListPage",
+            "Workspace/Dealers",
+            "Workspace/DynamicSearchCategory",
             "Workspace/FacetsExtension",
             "Workspace/FooterExtension",
             "Workspace/HideQuoteExtension",
             "Workspace/HomepageExtension",
             "Workspace/LoginFailureMessage",
+            "Workspace/Manuals",
             "Workspace/Moment",
             "Workspace/News",
             "Workspace/ProductDetailsExtension",
@@ -90,10 +93,22 @@
         "update": true,
         "chunk_size": 80
     },
-    "credentials": {},
+    "credentials": {
+        "user_agent": "sc-extension-devtools/2021.1.0",
+        "authID": "pangea_sb2",
+        "key": "446765bc51e70086cf582d32f0486fc0a764354ffec6c983b94e63af331346c4",
+        "secret": "97fda39654d2f0cf3f0f9011d97616f96a3136e2c7659b867e57a1e1bbbcc566",
+        "account": "5035704_SB2",
+        "hostname": "5035704-SB2.restlets.api.netsuite.com",
+        "website": 2,
+        "domain": "sca2021.pangeaaudio.com",
+        "webapp_id": "59656",
+        "ssp_folder": "59656",
+        "is_scis": false
+    },
     "nsdeployPath": ".nsdeploy",
     "_": [
-        "extension:deploy"
+        "extension:local"
     ],
     "product": "gulp",
     "$0": "gulp",
@@ -288,6 +303,124 @@
             "path": "SuiteScripts/Deploy_Extensions/JHM/DealerPriceListPage@1.0.0",
             "activation_id": "8",
             "extension_id": "2401"
+        },
+        {
+            "name": "Dealers",
+            "fantasyName": "Dealers",
+            "vendor": "JHM",
+            "type": "extension",
+            "target": "SCA,SCS",
+            "version": "1.0.0",
+            "description": "Dealers page",
+            "assets": {
+                "img": {
+                    "files": []
+                },
+                "fonts": {
+                    "files": []
+                },
+                "services": {
+                    "files": [
+                        "services/Dealers.Service.ss"
+                    ]
+                }
+            },
+            "templates": {
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/Dealers/Templates/jhm_dealers_dealers.tpl",
+                            "Modules/Dealers/Templates/jhm_dealers_info.tpl"
+                        ]
+                    }
+                }
+            },
+            "sass": {
+                "entry_points": {
+                    "shopping": "Modules/Dealers/Sass/_dealers-dealers.scss"
+                },
+                "files": [
+                    "Modules/Dealers/Sass/_dealers-dealers.scss"
+                ]
+            },
+            "javascript": {
+                "entry_points": {
+                    "shopping": "Modules/Dealers/JavaScript/JHM.Dealers.Dealers.js"
+                },
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/Dealers/JavaScript/JHM.Dealers.Dealers.js",
+                            "Modules/Dealers/JavaScript/Dealers.View.js",
+                            "Modules/Dealers/JavaScript/Dealers.Router.js",
+                            "Modules/Dealers/JavaScript/Dealers.Model.js",
+                            "Modules/Dealers/JavaScript/Dealers.Info.View.js"
+                        ]
+                    }
+                }
+            },
+            "ssp-libraries": {
+                "entry_point": "Modules/Dealers/SuiteScript/JHM.Dealers.Dealers.js",
+                "files": [
+                    "Modules/Dealers/SuiteScript/JHM.Dealers.Dealers.js",
+                    "Modules/Dealers/SuiteScript/Dealers.ServiceController.js",
+                    "Modules/Dealers/SuiteScript/Dealers.Model.js"
+                ]
+            },
+            "path": "SuiteScripts/Deploy_Extensions/JHM/Dealers@1.0.0",
+            "activation_id": "8",
+            "extension_id": "1401"
+        },
+        {
+            "name": "DynamicSearchCategory",
+            "fantasyName": "DynamicSearchCategory",
+            "vendor": "JHM",
+            "type": "extension",
+            "target": "SCA,SCS",
+            "version": "1.0.0",
+            "description": "Sets category to display items returned from saved search",
+            "assets": {
+                "img": {
+                    "files": []
+                },
+                "fonts": {
+                    "files": []
+                },
+                "services": {
+                    "files": [
+                        "services/DynamicSearchCategory.Service.ss"
+                    ]
+                }
+            },
+            "configuration": {
+                "files": [
+                    "Modules/DynamicSearchCategory/Configuration/DynamicSearchCategory.json"
+                ]
+            },
+            "javascript": {
+                "entry_points": {
+                    "shopping": "Modules/DynamicSearchCategory/JavaScript/JHM.DynamicSearchCategory.DynamicSearchCategory.js"
+                },
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/DynamicSearchCategory/JavaScript/JHM.DynamicSearchCategory.DynamicSearchCategory.js",
+                            "Modules/DynamicSearchCategory/JavaScript/DynamicSearchCategory.Model.js"
+                        ]
+                    }
+                }
+            },
+            "ssp-libraries": {
+                "entry_point": "Modules/DynamicSearchCategory/SuiteScript/JHM.DynamicSearchCategory.DynamicSearchCategory.js",
+                "files": [
+                    "Modules/DynamicSearchCategory/SuiteScript/JHM.DynamicSearchCategory.DynamicSearchCategory.js",
+                    "Modules/DynamicSearchCategory/SuiteScript/DynamicSearchCategory.ServiceController.js",
+                    "Modules/DynamicSearchCategory/SuiteScript/DynamicSearchCategory.Model.js"
+                ]
+            },
+            "path": "SuiteScripts/Deploy_Extensions/JHM/DynamicSearchCategory@1.0.0",
+            "activation_id": "8",
+            "extension_id": "2101"
         },
         {
             "name": "FacetsExtension",
@@ -527,6 +660,123 @@
             "extension_id": "5401"
         },
         {
+            "name": "Manuals",
+            "fantasyName": "Manuals",
+            "vendor": "JHM",
+            "type": "extension",
+            "target": "SCA,SCS",
+            "version": "1.0.0",
+            "description": "Manuals",
+            "assets": {
+                "img": {
+                    "files": []
+                },
+                "fonts": {
+                    "files": []
+                },
+                "services": {
+                    "files": [
+                        "services/Manuals.Service.ss"
+                    ]
+                }
+            },
+            "templates": {
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/Manuals/Templates/manuals_page.tpl",
+                            "Modules/Manuals/Templates/manuals_single_item.tpl",
+                            "Modules/Manuals/Templates/manuals_product.tpl"
+                        ]
+                    }
+                }
+            },
+            "sass": {
+                "entry_points": {
+                    "shopping": "Modules/Manuals/Sass/_manuals-manuals.scss"
+                },
+                "files": [
+                    "Modules/Manuals/Sass/_manuals-manuals.scss",
+                    "Modules/Manuals/Sass/_manuals.scss"
+                ]
+            },
+            "javascript": {
+                "entry_points": {
+                    "shopping": "Modules/Manuals/JavaScript/JHM.Manuals.Manuals.js"
+                },
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/Manuals/JavaScript/JHM.Manuals.Manuals.js",
+                            "Modules/Manuals/JavaScript/Manuals.Router.js",
+                            "Modules/Manuals/JavaScript/Manuals.Model.js",
+                            "Modules/Manuals/JavaScript/Manuals.Page.View.js",
+                            "Modules/Manuals/JavaScript/Manuals.Single.View.js",
+                            "Modules/Manuals/JavaScript/Manuals.Product.View.js"
+                        ]
+                    }
+                }
+            },
+            "ssp-libraries": {
+                "entry_point": "Modules/Manuals/SuiteScript/JHM.Manuals.Manuals.js",
+                "files": [
+                    "Modules/Manuals/SuiteScript/JHM.Manuals.Manuals.js",
+                    "Modules/Manuals/SuiteScript/Manuals.ServiceController.js",
+                    "Modules/Manuals/SuiteScript/Manuals.Model.js"
+                ]
+            },
+            "path": "SuiteScripts/Deploy_Extensions/JHM/Manuals@1.0.0",
+            "activation_id": "8",
+            "extension_id": "601"
+        },
+        {
+            "name": "Moment",
+            "fantasyName": "Moment",
+            "vendor": "JHM",
+            "type": "extension",
+            "target": "SCA,SCS",
+            "version": "2.22.2",
+            "description": "Moment.js",
+            "assets": {
+                "img": {
+                    "files": []
+                },
+                "fonts": {
+                    "files": []
+                },
+                "services": {
+                    "files": []
+                }
+            },
+            "javascript": {
+                "entry_points": {
+                    "shopping": "Modules/Moment/JavaScript/Moment.js",
+                    "myaccount": "Modules/Moment/JavaScript/Moment.js",
+                    "checkout": "Modules/Moment/JavaScript/Moment.js"
+                },
+                "application": {
+                    "shopping": {
+                        "files": [
+                            "Modules/Moment/JavaScript/Moment.js"
+                        ]
+                    },
+                    "myaccount": {
+                        "files": [
+                            "Modules/Moment/JavaScript/Moment.js"
+                        ]
+                    },
+                    "checkout": {
+                        "files": [
+                            "Modules/Moment/JavaScript/Moment.js"
+                        ]
+                    }
+                }
+            },
+            "path": "SuiteScripts/Deploy_Extensions/JHM/Moment@2.22.2",
+            "activation_id": "8",
+            "extension_id": "701"
+        },
+        {
             "name": "News",
             "fantasyName": "News",
             "vendor": "JHM",
@@ -611,7 +861,7 @@
                 "SCA": ">=21.1.0",
                 "SCS": ">=21.1.0"
             },
-            "version": "1.7.0",
+            "version": "1.8.0",
             "description": "",
             "override": [],
             "skins": [
@@ -1968,9 +2218,9 @@
                     ]
                 }
             },
-            "path": "SuiteScripts/Deploy_Extensions/SALORAERP/PA2021_Theme@1.7.0",
+            "path": "SuiteScripts/Deploy_Extensions/SALORAERP/PA2021_Theme@1.8.0",
             "activation_id": "8",
-            "extension_id": "5801"
+            "extension_id": "5901"
         },
         {
             "name": "ProductDetailsExtension",

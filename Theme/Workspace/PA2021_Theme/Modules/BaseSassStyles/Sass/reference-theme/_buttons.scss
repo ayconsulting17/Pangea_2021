@@ -49,14 +49,14 @@ $sc-button-secondary-text-transform: none; /* editable({
 }) */
 
 // Tertiary button variables
-$sc-button-tertiary-background-color: $sc-neutral-shade-0; /* editable({"type": "color", "label": "Background"}) */
-$sc-button-tertiary-text-color: $sc-color-secondary; /* editable({"type": "color", "label": "Text"}) */
-$sc-button-tertiary-border-color: $sc-color-secondary; /* editable({"type": "color", "label": "Border"}) */
+$sc-button-tertiary-background-color: $regent-gray; /* editable({"type": "color", "label": "Background"}) */
+$sc-button-tertiary-text-color: white; /* editable({"type": "color", "label": "Text"}) */
+$sc-button-tertiary-border-color:  $sc-button-secondary-background-color; /* editable({"type": "color", "label": "Border"}) */
 $sc-button-tertiary-border-radius: $sc-border-radius; /* editable({"type": "string", "label": "Border radius"}) */
 
-$sc-button-tertiary-hover-background-color: saturate(lighten($sc-color-secondary, 4), 4); /* editable({"type": "color", "label": "Hover background"}) */
+$sc-button-tertiary-hover-background-color: $silver-chalice; /* editable({"type": "color", "label": "Hover background"}) */
 $sc-button-tertiary-hover-text-color: white; /* editable({"type": "color", "label": "Hover text"}) */
-$sc-button-tertiary-hover-border-color: $sc-button-tertiary-border-color; /* editable({"type": "color", "label": "Hover border"}) */
+$sc-button-tertiary-hover-border-color: $sc-button-secondary-border-color; /* editable({"type": "color", "label": "Hover border"}) */
 
 $sc-button-tertiary-active-background-color: darken($sc-color-secondary, 6); /* editable({"type": "color", "label": "Active background"}) */
 $sc-button-tertiary-active-text-color: white; /* editable({"type": "color", "label": "Active text"}) */

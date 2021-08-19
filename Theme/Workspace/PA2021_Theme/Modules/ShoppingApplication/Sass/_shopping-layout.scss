@@ -13,6 +13,11 @@
 
 .shopping-layout-footer {
 	@extend %sc-footer !optional;
+	position: absolute;
+	right: 0;
+	left: 0;
+	text-align: center;
+	margin: 50px 0 0 0;
 }
 
 .shopping-layout-breadcrumb, .shopping-layout-notifications {

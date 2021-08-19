@@ -141,7 +141,9 @@
 }
 
 .address-details-action {
-    @extend .button-link;
+    @extend .button-tertiary;
+	@extend .button-small;
+    margin-right:$sc-margin-lv1;
 }
 
 .address-details-selector-option {

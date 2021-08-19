@@ -69,9 +69,8 @@
     text-transform: uppercase;
     text-align: right;
     color: $sc-color-copy;
-    background: $sc-color-theme-background;
-    outline: none;
     border: 0px;
+	border: 1px solid #ccc;
 }
 
 .transaction-line-views-cell-actionable-label-qty{
