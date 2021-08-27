@@ -114,7 +114,7 @@
     },
     "nsdeployPath": ".nsdeploy",
     "_": [
-        "extension:local"
+        "extension:deploy"
     ],
     "product": "gulp",
     "$0": "gulp",
