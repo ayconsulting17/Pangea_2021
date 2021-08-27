@@ -3,14 +3,16 @@ define(
 	'ProductDetailsExtension'
 ,   [
 	'ProductDetails.Full.View'
-	// 'Manuals.Product.View',
-	// 'StateComplianceWarning.View'
+,	'Manuals.Product.View'
+, 	'ProductDetails.Information.View'
+,	'StateComplianceWarning.View'
 
 	]
 ,   function (
-	ProductDetailsFullView
-	// ManualsProductView,
-	// StateComplianceWarningView
+	ProductDetailsFullView,
+	ManualsProductView,
+	ProductInformationView,
+	StateComplianceWarningView
 	)
 {
 	'use strict';
@@ -32,6 +34,21 @@ define(
 		return returnString;
 	}
 
+	_.extend(ProductInformationView.prototype, {
+
+		childViews: _.extend({}, ProductInformationView.prototype.childViews, {
+
+			'Manuals': function ()
+			{
+				return new ManualsProductView({
+					application: this.application
+				,	id: this.model.get('item').get('internalid')
+				});
+			}
+		}) 
+	})
+
+
 	return  {
 		mountToApp: function mountToApp (container)
 		{
@@ -41,11 +58,21 @@ define(
 			// https://system.netsuite.com/help/helpcenter/en_US/APIs/SuiteCommerce/Extensibility/Frontend/index.html
 			
 			/** @type {LayoutComponent} */
-			
+
+			var layout = container.getComponent('Layout');
             var PDP = container.getComponent('PDP')
+
+	
 			
 			if(PDP)
 			{
+
+				layout.addChildView('StateComplianceWarning', function () {
+					return new 	StateComplianceWarningView
+					();
+				});	
+
+
 				PDP.addToViewContextDefinition(PDP.PDP_FULL_VIEW, 'category', 'string', function(context) {
 
 					var item = context.model.item
@@ -78,6 +105,8 @@ define(
 			ProductDetailsFullView.prototype.getContext = _.wrap(ProductDetailsFullView.prototype.getContext, function (fn) {
 				var context = fn.apply(this, _.toArray(arguments).slice(1));
 				console.log('context',context)
+				context.showManual =  this.model.get('item').get('custitem_with_manual');
+				context.showCompliance = this.model.get('item').get('custitem_show_state_compliance');
 				context.showComponents = this.model.get('item').get('isinstock') == false && this.model.get('item').get('itemtype') == "Kit"; 
 				context.isinstock = this.model.get('item').get('isinstock');
 				context.custitem_kit_display_name1 = this.model.get('item').get('custitem_kit_display_name1');

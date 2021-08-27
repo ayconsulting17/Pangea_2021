@@ -1,0 +1,70 @@
+{
+    "name": "Contact",
+    "fantasyName": "Contact",
+    "vendor": "JHM",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "description": "Contact",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/Contact.Service.ss"
+            ]
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Contact/Configuration/Contact.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Contact/Sass/_contact-contact.scss"
+        },
+        "files": [
+            "Modules/Contact/Sass/_contact-contact.scss",
+            "Modules/Contact/Sass/_contact.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Contact/Templates/jhm_contact.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Contact/JavaScript/JHM.Contact.Contact.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Contact/JavaScript/JHM.Contact.Contact.js",
+                    "Modules/Contact/JavaScript/Contact.Router.js",
+                    "Modules/Contact/JavaScript/Contact.View.js",
+                    "Modules/Contact/JavaScript/Contact.Model.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Contact/SuiteScript/JHM.Contact.Contact.js",
+        "files": [
+            "Modules/Contact/SuiteScript/JHM.Contact.Contact.js",
+            "Modules/Contact/SuiteScript/Contact.ServiceController.js",
+            "Modules/Contact/SuiteScript/Contact.Model.js"
+        ]
+    },
+    "local_folder": "Workspace/Contact"
+}

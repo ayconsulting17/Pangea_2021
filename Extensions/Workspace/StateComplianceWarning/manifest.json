@@ -1,0 +1,58 @@
+{
+    "name": "StateComplianceWarning",
+    "fantasyName": "State Compliance Warning",
+    "vendor": "JHM",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "description": "State Compliance Warning",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/StateComplianceWarning/Configuration/StateComplianceWarning.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/StateComplianceWarning/Sass/_statecompliancewarning-statecompliancewarning.scss"
+        },
+        "files": [
+            "Modules/StateComplianceWarning/Sass/_statecompliancewarning-statecompliancewarning.scss",
+            "Modules/StateComplianceWarning/Sass/_statecompliancewarning.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/StateComplianceWarning/Templates/state_warning_icons_pdp.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/StateComplianceWarning/JavaScript/StateComplianceWarning.View.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/StateComplianceWarning/JavaScript/StateComplianceWarning.View.js",
+                    "Modules/StateComplianceWarning/JavaScript/StateComplianceWarning.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace/StateComplianceWarning"
+}
