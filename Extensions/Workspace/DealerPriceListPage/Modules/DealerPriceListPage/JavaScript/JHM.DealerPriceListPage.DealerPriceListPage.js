@@ -39,6 +39,15 @@ define('JHM.DealerPriceListPage.DealerPriceListPage'
 				if (removeEntryIds.indexOf(entry.id) !== -1) MyAccountMenuInstance.removeEntry(entry.id);
 			})
 
+			MyAccountMenuInstance.addEntry({
+					parent: 'orders'
+				,	id: 'request-a-quote'
+				,	name: _('Request A Quote').translate()
+				,	url: 'request-a-quote'
+				,	permission: 'transactions.tranFind.1,transactions.tranEstimate.1'
+			});
+			
+
 			if (SC.ENVIRONMENT.permissions.transactions.tranEstimate >= 2) {
 			MyAccountMenuInstance.addEntry({
 					id: 'dealer-price-list-page'

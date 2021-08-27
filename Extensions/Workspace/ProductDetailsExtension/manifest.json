@@ -2,15 +2,14 @@
     "name": "ProductDetailsExtension",
     "fantasyName": "ProductDetailsExtension",
     "vendor": "Salora",
-    "version": "1.0.0",
     "type": "extension",
     "target": "SCA,SCS",
     "target_version": {
         "SCA": ">=21.1.0",
         "SCS": ">=21.1.0"
     },
+    "version": "1.0.0",
     "description": " ",
-    "skins": [],
     "assets": {
         "img": {
             "files": []
@@ -35,7 +34,6 @@
             }
         }
     },
-    "local_folder": "Workspace/ProductDetailsExtension",
     "suitescript2": {
         "files": []
     }

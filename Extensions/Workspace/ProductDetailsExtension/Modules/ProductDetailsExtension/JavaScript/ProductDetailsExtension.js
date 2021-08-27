@@ -61,8 +61,6 @@ define(
 
 			var layout = container.getComponent('Layout');
             var PDP = container.getComponent('PDP')
-
-	
 			
 			if(PDP)
 			{
