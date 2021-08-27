@@ -21,7 +21,7 @@
 						<ul class="product-details-information-content-tabs" role="tablist">
 							{{#each details}}
 								<li class="product-details-information-tab-title {{#if @first}} active {{/if}}" role="presentation">
-									<a href="#" data-action="selected-tab" data-id="{{@index}}" data-target="#product-details-information-tab-{{@index}}" data-toggle="tab">{{name}}</a>
+									<a href="#" data-action="#product-details-information-tab-{{@index}}" data-id="{{@index}}" data-target="#product-details-information-tab-{{@index}}" data-toggle="tab">{{name}}</a>
 								</li>
 							{{/each}}
 						</ul>
@@ -31,7 +31,15 @@
 								<div role="tabpanel" class="product-details-information-tab-content-panel {{#if @first}}active{{/if}}" id="product-details-information-tab-{{@index}}" data-action="pushable" data-id="product-details-information-{{ @index }}">
 									{{#if ../showHeader}}<h2 class="product-details-information-tab-content-panel-title">{{name}}</h2>{{/if}}
 									<div id="product-details-information-tab-content-container-{{@index}}" class="product-details-information-tab-content-container" data-type="information-content-text">{{{content}}}</div>
+								
+								{{!-- Do not rename Manuals on Configuration --}}
+								{{#ifEquals name  "Manuals"}}
+								<div class="manual-details">
+								<div data-view="Manuals"></div>
 								</div>
+								{{/ifEquals}}
+								</div>
+								
 							{{/each}}
 						</div>
 					</div>
@@ -63,5 +71,3 @@ Use the following context variables when customizing this template:
 	details (Array)
 
 ----}}
-
-{{log this}}

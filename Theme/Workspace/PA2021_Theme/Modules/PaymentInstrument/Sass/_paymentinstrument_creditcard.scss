@@ -133,7 +133,9 @@ $credit-card-height-offset: 20px;
 }
 
 .paymentinstrument-creditcard-action {
-    @extend .button-link;
+    @extend .button-tertiary;
+	@extend .button-small;
+	margin-right:$sc-margin-lv1;
 }
 
 .paymentinstrument-creditcard-container {

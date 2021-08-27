@@ -82,12 +82,14 @@
 							<div class="kit-components"><a href="/{{model.item.custitem_kit_url_component_2}}">{{model.item.custitem_kit_display_name2}}</a></div>
 						</div>
 						{{/if}}
-
-						<div data-view="StateComplianceWarning"></div>
-
+						
 						<div data-view="StockDescription"></div>
 
 						<div data-view="SocialSharing.Flyout" class="product-details-full-social-sharing"></div>
+
+						{{#if showCompliance}}
+						<div data-view="StateComplianceWarning" class="pdp-compliance-container"></div>
+						{{/if}}
 
 						<div class="product-details-full-main-bottom-banner">
 							<div id="banner-summary-bottom" class="product-details-full-banner-summary-bottom"></div>
