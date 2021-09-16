@@ -32,10 +32,10 @@ define('StateComplianceWarning.View'
         {
 
             return {
-               icon: Configuration.get('stateWarnings.californiaIcon')
+                icon: Configuration.get('stateWarnings.californiaIcon')
             ,   message: Configuration.get('stateWarnings.californiaMessage')
-            ,   link: Configuration.get('stateWarnings.californiaLink')
-            ,   linkText: Configuration.get('stateWarnings.californiaLinkText')
+            ,   icon2: Configuration.get('stateWarnings.icon2')
+            ,   message2: Configuration.get('stateWarnings.message2')
             }
         }
     });

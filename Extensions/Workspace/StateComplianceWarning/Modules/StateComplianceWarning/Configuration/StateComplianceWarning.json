@@ -20,17 +20,17 @@
 			"type": "string",
 			"title": "Text for CA Prop 65 warning"
 		},
-		"stateWarnings.californiaLink": {
+		"stateWarnings.icon2": {
 			"group": "layout",
 			"subtab": "stateWarnings",
 			"type": "string",
-			"title": "Link to be displayed in CA Prop 65 warning"
+			"title": "State Compliance Icon 2"
 		},
-		"stateWarnings.californiaLinkText": {
+		"stateWarnings.message2": {
 			"group": "layout",
 			"subtab": "stateWarnings",
 			"type": "string",
-			"title": "Text to be displayed in CA Prop 65 link"
+			"title": "Text for State Compliance Icon 2 "
 		}
 	}
 }
