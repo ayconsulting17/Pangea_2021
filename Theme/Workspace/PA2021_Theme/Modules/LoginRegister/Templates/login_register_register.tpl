@@ -91,9 +91,15 @@
 
 	<div class="login-register-register-form-messages" data-type="alert-placeholder"></div>
 
+	<div data-view="reCaptcha"></div>
+	     <div data-validation="control"> 
+                   <input style="display:none;" id="grecaptcha" type="text" name="grecaptcha" placeholder="grecaptcha" />
+                </div>
+	
+
 {{#unless showFormFieldsOnly}}
 	<div class="login-register-register-form-controls-group">
-		<button type="submit" class="login-register-register-form-submit">
+		<button type="submit" class="login-register-register-form-submit" id="login-register-register-form-submit" data-sitekey="{{sitekey}}"  data-callback='onSubmit' data-action='submit'>
 			{{translate 'Create Account'}}
 		</button>
 	</div>
@@ -114,3 +120,9 @@ Use the following context variables when customizing this template:
 	hasAutoFocus (Boolean)
 
 ----}}
+
+ <script>
+   function onSubmit(token) {
+     document.getElementById("login-register-register-form-submit").submit();
+   }
+ </script>

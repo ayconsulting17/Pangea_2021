@@ -77,6 +77,11 @@
 ////////// Testimonial page
 #testimonial-page {
   //@extend .container;
+  @media (min-width: $screen-lg-min) {
+  width: 65%;
+  margin: 0 auto;
+  }
+
 
   // TODO: Refactor these out into theme styles
   h1 {
@@ -95,7 +100,9 @@
     padding: $sc-padding-lv3 0;
 
     &:nth-child(even) {
-      background: $gallery;
+      background: #f1f1f1;
+      padding: 25px;
+      ;
     }
   }
 }

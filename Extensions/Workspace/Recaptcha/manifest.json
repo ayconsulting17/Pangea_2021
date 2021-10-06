@@ -1,0 +1,66 @@
+{
+    "name": "Recaptcha",
+    "fantasyName": "Recaptcha",
+    "vendor": "Salora",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=21.1.0",
+        "SCS": ">=21.1.0"
+    },
+    "description": "Recaptcha Ext",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/Recaptcha.Service.ss"
+            ]
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Recaptcha/Configuration/Recaptcha.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Recaptcha/Templates/salora_recaptcha_recaptcha.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Recaptcha/JavaScript/Recaptcha.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Recaptcha/JavaScript/Recaptcha.View.js",
+                    "Modules/Recaptcha/JavaScript/Recaptcha.js",
+                    "Modules/Recaptcha/JavaScript/Recaptcha.Model.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Recaptcha/SuiteScript/Salora.Recaptcha.Recaptcha.js",
+        "files": [
+            "Modules/Recaptcha/SuiteScript/Salora.Recaptcha.Recaptcha.js",
+            "Modules/Recaptcha/SuiteScript/Recaptcha.ServiceController.js"
+        ]
+    },
+    "local_folder": "Workspace/Recaptcha",
+    "suitescript2": {
+        "files": []
+    }
+}

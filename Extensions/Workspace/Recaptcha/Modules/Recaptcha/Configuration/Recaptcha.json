@@ -1,0 +1,38 @@
+{
+    "type":"object",
+
+    "subtab":{
+        "id":"googlerecaptcha",
+        "title":"Google Recaptcha",
+        "group":"extensions",
+        "description":"Configuration of google recaptcha"
+
+    },
+    "properties":{
+        "salora.enableCaptcha":{
+            "group":"extensions",
+            "subtab":"googlerecaptcha",
+            "type":"boolean",
+            "title":"Enable Captcha",
+            "description":"Check this to use Captcha feature",
+            "default":false
+            
+        },
+        "salora.sitekey":{
+            "group":"extensions",
+            "subtab":"googlerecaptcha",
+            "type":"string",
+            "title":"Captcha Site Key",
+            "description":"https://www.google.com/recaptcha > Admin > Settings > Site Keys",
+            "Mandatory":true
+        },
+        "salora.secretkey":{
+            "group":"extensions",
+            "subtab":"googlerecaptcha",
+            "type":"string",
+            "title":"Captcha Secret Key",
+            "description":"https://www.google.com/recaptcha > Admin > Settings > Site Keys",
+            "Mandatory":true
+        }
+    }
+}
