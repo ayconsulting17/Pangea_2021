@@ -70,20 +70,14 @@
 								<div class="product-details-full-actions-container">
 									<div data-view="MainActionView"></div>
 									<div data-view="ProductDetails.AddToQuote" class="product-details-full-actions-addtoquote"></div>
-
 								</div>
 							</section>
 						{{/if}}
-
-						{{#if showComponents}}
-						<div class="components-container">
-							<div class="components-title">Components:</div>
-							<div class="kit-components"><a href="/{{model.item.custitem_kit_url_component_1}}">{{model.item.custitem_kit_display_name1}}</a></div>
-							<div class="kit-components"><a href="/{{model.item.custitem_kit_url_component_2}}">{{model.item.custitem_kit_display_name2}}</a></div>
-						</div>
-						{{/if}}
 						
-						<div data-view="StockDescription"></div>
+
+						{{#if showkitComponents}}
+						<div data-view="KitComponents"></div>
+						{{/if}}
 
 						<div data-view="SocialSharing.Flyout" class="product-details-full-social-sharing"></div>
 

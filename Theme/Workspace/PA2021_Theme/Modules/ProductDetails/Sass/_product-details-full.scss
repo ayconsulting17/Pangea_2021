@@ -340,11 +340,35 @@
 	margin:10px 0px 10px 0px;
 }
 
-.kit-components{
-	font-weight: 400;
-}
-
 .components-title{
 	font-weight: bold;
 }
 
+.product-detail-options-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.components-label{
+	font-weight: bold;
+	color:$sc-color-copy-dark;
+}
+
+.kit-memberslist{
+	display: block;
+    font-weight: bold;
+}
+
+.kit-components {
+    font-weight: 400;
+    margin-left: -15px;
+    margin-top: 15px;
+}
+
+.kit-member-name a{
+color:#2E3C97;
+}
+
+.instock-label{
+	display: inline-block;
+}

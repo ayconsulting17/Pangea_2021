@@ -1,0 +1,64 @@
+{
+    "name": "KitComponents",
+    "fantasyName": "KitComponents",
+    "vendor": "AA",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=21.1.0",
+        "SCS": ">=21.1.0"
+    },
+    "description": " ",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/KitComponents.Service.ss"
+            ]
+        }
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/KitComponents/Templates/kitcomponents.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/KitComponents/JavaScript/KitComponents.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/KitComponents/JavaScript/KitComponents.View.js",
+                    "Modules/KitComponents/JavaScript/KitComponents.js",
+                    "Modules/KitComponents/JavaScript/KitComponents.Model.js",
+                    "Modules/KitComponents/JavaScript/KitComponents.SS2Model.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/KitComponents/SuiteScript/KitComponents.js",
+        "files": [
+            "Modules/KitComponents/SuiteScript/KitComponents.ServiceController.js",
+            "Modules/KitComponents/SuiteScript/KitComponents.js"
+        ]
+    },
+    "local_folder": "Workspace/KitComponents",
+    "suitescript2": {
+        "files": [
+            "Modules/KitComponents/SuiteScript2/KitComponents.Service.ss"
+        ]
+    }
+}

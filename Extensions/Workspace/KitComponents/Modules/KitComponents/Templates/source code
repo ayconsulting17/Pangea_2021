@@ -1,0 +1,177 @@
+<!--
+<div class="alert alert-danger" role="alert">
+We are currently experiencing temporary issues with our Store Locator. You can contact us via <a href="javascript:zE.activate();">Chat</a> or <a href="mailto:support@mmhair.com">email</a> us at support@mmhair.com and we will provide you with the location closest to you. Please include your zip code in your message.
+</div>
+-->
+
+<!--
+
+<iframe id="store_locator" src="/site/store_locator/ec_storeLocator.html" style="margin:0; height:590px; width: 950px; border:0;" scrolling="no" overflow="hidden" align="center" onload="AdjustIframeHeightOnLoad()"></iframe>
+
+<script type="text/javascript">
+function AdjustIframeHeightOnLoad() { document.getElementById("store_locator").style.height = document.getElementById("store_locator").contentWindow.document.body.scrollHeight + "px"; }
+function AdjustIframeHeight(i) { document.getElementById("store_locator").style.height = parseInt(i) + "px"; }
+</script>
+
+--&gt;
+
+
+<style>
+span#egift p {
+    color: #c12026 !important;
+    margin-top: 8% !important;
+    font-weight: 700;
+    line-height: .45;
+ }
+b, strong {
+    font-weight: 700;
+    font-size: 1.3em !important;
+}
+#controls {
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+#submit_button{
+  margin: 4px !important;
+  font-size: 1.2em !important;
+}
+input#search_input{
+    border: 1px solid black !important;
+}
+
+select#radius{
+    color: black !important;
+    font-size: 1em !important;
+    border: 1px solid black !important;
+}
+a.hvr-bob{
+   margin-bottom: 12%;
+}
+.stateTitle {
+    padding-top: 33px !important;
+}
+#alphabets {
+    font-size: 18px;
+}
+@media (min-width: 450px) {
+    p#map_canvas {
+        height: 450px !important
+    }
+}
+#Countries {
+    font-size: 20px;
+    word-spacing: 22px;
+    margin: 10px 0px 0px 20px;
+}
+.country {
+    color: black;
+    text-decoration: underline !important;
+}
+.state {
+    text-decoration: underline !important;
+}
+.countryTitle {
+    padding-top: 30px !important;
+}
+#select-state select {
+    width: 150px;
+}
+div#select-state {
+    margin-bottom: 10px;
+}
+</style>
+
+<link rel="Stylesheet" href="/site/css/ec_storeLocator.css" type="text/css">                          
+    <!-- <script src="//code.jquery.com/jquery-1.11.2.min.js"></script> --&gt;    
+    <!--lodash min-->
+    <script src="/c.4140019/site/store_locator/lodash.min.js" type="text/javascript"></script>
+    <!--Script JS-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsUMUihefMSYNgws0bYw41Ra10XPoXwcc&sensor=true"></script>
+    <!--googleMapsAPI V3-->
+    <script src="/c.4140019/site/store_locator/ec_storeLocator.js" type="text/javascript"></script>  
+    <script language="javascript" type="text/javascript">
+        var i=new Image();
+        i.src='/app/site/hit/tracker.nl?c=4140019&n=1&type=page&siteroot=Live+Hosting+Files&url=%2Fsite%2Fstore_locator%2Fec_storeLocator.html&referer='+escape(document.referrer);
+        i.onload=function(){nsVoid();};
+        function nsVoid(){return;};
+    </script>
+
+
+<div id="container">
+
+    <div id="navigationBar">
+        <label id="findDealerIcon">FIND A STORE NEAR YOU</label><br>
+        <label>Enter your Address or City and State, or just a Postal Code to locate places near you</label><br>
+    </div>
+
+    <div id="controls">
+        <span class="control_container">
+            <label>Address:</label>
+            <input type="text" id="search_input">
+        </span>
+
+        <span class="control_container">
+            <label>Radius:</label>
+            <select id="radius" style="width:200px;">
+                <option value="5">5 miles</option>
+                <option value="10">10 miles</option>
+                <option value="25">25 miles</option>
+                <option value="50" selected="selected">50 miles</option>
+                <option value="100">100 miles</option>
+            </select>
+        </span>
+
+        <span id="submit_button" class="control_container">
+            <label id="submit_text">Locate</label>
+            <img alt="loading" id="spinner" src="/c.4140019/site/store_locator/store-locator-loader.gif" style="display:none; padding-left:85px;">
+        </span>
+    </div>
+
+    <div id="map_section" style="overflow:hidden;">&nbsp;
+        <!-- map -->
+        <!-- <p id="map_canvas" style="width:930px; height:450px; float:left; margin:0;"></p> -->
+        <p id="map_canvas" style="height:200px;"></p>
+    </div> <!--ENDING MAP SECTION DIV-->
+
+
+
+<br>
+    <div id="Countries">
+        <a href="#United-States" class="country">United_States</a>
+       <a href="#Canada" class="country">Canada</a>
+        <a href="#Australia" class="country">Australia</a>
+        <a href="#France" class="country">France</a>
+        <a href="#Germany" class="country">Germany</a>
+        <a href="#Italy" class="country">Italy</a>
+<a href="#Netherlands" class="country">Netherlands</a>
+<a href="#Singapore" class="country">Singapore</a>
+        <a href="#Spain" class="country">Spain</a>
+<a href="#United-Kingdom" class="country">United_Kingdom</a>
+        
+    </div>
+
+    <div id="resultsDisplay">
+        <!-- results -->
+        <p id="results_list"></p>
+    </div> <!--ENDING RESULTS DIV-->
+
+</div> <!--ENDING CONTAINER DIV-->
+<!-- END EDIT -->
+<div id="scriptHolder"></div>
+<div id="ajaxDivHolder"></div>
+
+<script>
+    $(window).load(function() {
+        function insertAfter(el, referenceNode) {
+        referenceNode.parentNode.insertBefore(el, referenceNode.nextSibling);
+    }
+    var alpha = document.getElementById("alphabets");
+    var usa = document.getElementById("United-States");
+    insertAfter(alpha, usa);
+
+$( "#Victoria" ).insertAfter($('#Australia'));
+$( "#Encompass\\ Health\\ Clinic" ).insertAfter($('#Victoria'));
+var hash = window.location.hash.substring(1);
+$("html, body").animate({ scrollTop: $('#'+hash).offset().top }, 1); //scroll to ID for International sections
+    })
+</script>

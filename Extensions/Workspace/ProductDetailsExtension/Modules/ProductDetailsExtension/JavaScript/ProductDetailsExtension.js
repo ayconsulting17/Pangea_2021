@@ -100,16 +100,51 @@ define(
 				})
 			}
 
+			layout.addChildView('ProductOptions.View', function () {
+				return new ProductOptions.View({});
+			});
+
+
 			ProductDetailsFullView.prototype.getContext = _.wrap(ProductDetailsFullView.prototype.getContext, function (fn) {
 				var context = fn.apply(this, _.toArray(arguments).slice(1));
-				console.log('context',context)
+
 				context.showManual =  this.model.get('item').get('custitem_with_manual');
 				context.showCompliance = this.model.get('item').get('custitem_show_state_compliance');
-				context.showComponents = this.model.get('item').get('isinstock') == false && this.model.get('item').get('itemtype') == "Kit"; 
+				context.showkitComponents = this.model.get('item').get('itemtype') == "Kit"; 
 				context.isinstock = this.model.get('item').get('isinstock');
 				context.custitem_kit_display_name1 = this.model.get('item').get('custitem_kit_display_name1');
 				context.custitem_kit_url_component_1 = this.model.get('item').get('custitem_kit_url_component_1');
 				context.itemtype = this.model.get('item').get('itemtype');
+
+				context.condition = this.model.get('item').get('custitem_condition');
+				context.finish = this.model.get('item').get('custitem_finish');
+				context.options = this.model.get('item').get('custitem_options');
+				context.length_metric = this.model.get('item').get('custitem_length_metric');
+				context.length_us = this.model.get('item').get('custitem_length_us');
+				context.amptospeaker = this.model.get('item').get('custitem_amptospeaker');
+				context.rackmount = this.model.get('item').get('custitem_rackmount');
+				context.storage = this.model.get('item').get('custitem_storage');
+				context.cartridge_output = this.model.get('item').get('custitem_cartridge_output');
+
+				context.pair_or_single = this.model.get('item').get('custitem_pair_or_single');
+				context.interconnect_end = this.model.get('item').get('custitem_interconnect_end');
+				context.color = this.model.get('item').get('custitem_color');
+				context.height = this.model.get('item').get('custitem_height');
+				context.volume = this.model.get('item').get('custitem_volume');
+				context.amperage = this.model.get('item').get('custitem_amperage');
+				context.voltage = this.model.get('item').get('custitem_voltage');
+				context.cartridgetype = this.model.get('item').get('custitem_cartridgetype');
+
+				context.tonearmtype = this.model.get('item').get('custitem_tonearmtype');
+				context.drawer_size = this.model.get('item').get('custitem_drawer_size');
+				context.treatment = this.model.get('item').get('custitem_treatment');
+
+				context.cable_contact_type = this.model.get('item').get('custitem_cable_contact_type');
+				context.boxsize = this.model.get('item').get('custitem_customboxsize');
+				context.size = this.model.get('item').get('custitem_size');
+				context.width = this.model.get('item').get('custitem_width');
+				context.weightcapacity = this.model.get('item').get('custitem_weightcapacity');
+
 				return context;
 			});
 
