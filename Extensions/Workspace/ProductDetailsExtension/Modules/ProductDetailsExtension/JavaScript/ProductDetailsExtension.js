@@ -5,14 +5,14 @@ define(
 	'ProductDetails.Full.View'
 ,	'Manuals.Product.View'
 , 	'ProductDetails.Information.View'
-,	'StateComplianceWarning.View'
+,	'StateComplianceWarning.View',
 
 	]
 ,   function (
 	ProductDetailsFullView,
 	ManualsProductView,
 	ProductInformationView,
-	StateComplianceWarningView
+	StateComplianceWarningView,
 	)
 {
 	'use strict';
@@ -66,11 +66,10 @@ define(
 			{
 
 				layout.addChildView('StateComplianceWarning', function () {
-					return new 	StateComplianceWarningView
-					();
+					return new 	StateComplianceWarningView();
 				});	
 
-
+	
 				PDP.addToViewContextDefinition(PDP.PDP_FULL_VIEW, 'category', 'string', function(context) {
 
 					var item = context.model.item
@@ -116,7 +115,16 @@ define(
 				context.custitem_kit_url_component_1 = this.model.get('item').get('custitem_kit_url_component_1');
 				context.itemtype = this.model.get('item').get('itemtype');
 
-				context.condition = this.model.get('item').get('custitem_condition');
+				context.condition = this.model.get('item').get('custitem_condition')
+
+				//tooltipconditions
+				context.new = this.model.get('item').get('custitem_condition') == "New";
+				context.demo = this.model.get('item').get('custitem_condition') == "Demo";
+				context.openbox = this.model.get('item').get('custitem_condition') == "Open Box";
+				context.factory = this.model.get('item').get('custitem_condition') == "Factory Refreshed";
+				context.cosmetically_blemished = this.model.get('item').get('custitem_condition') == "Cosmetically Blemished";
+				context.used = this.model.get('item').get('custitem_condition') == "Used";
+
 				context.finish = this.model.get('item').get('custitem_finish');
 				context.options = this.model.get('item').get('custitem_options');
 				context.length_metric = this.model.get('item').get('custitem_length_metric');
@@ -124,7 +132,7 @@ define(
 				context.amptospeaker = this.model.get('item').get('custitem_amptospeaker');
 				context.rackmount = this.model.get('item').get('custitem_rackmount');
 				context.storage = this.model.get('item').get('custitem_storage');
-				context.cartridge_output = this.model.get('item').get('custitem_cartridge_output');
+				context.cartridge_output = this.model.get('item').get('custitem_cartridgeoutput');
 
 				context.pair_or_single = this.model.get('item').get('custitem_pair_or_single');
 				context.interconnect_end = this.model.get('item').get('custitem_interconnect_end');

@@ -3,7 +3,13 @@
 
 	<div class="facets-item-cell-grid-image-wrapper">
 		<a class="facets-item-cell-grid-link-image" href="{{url}}">
-			<img class="facets-item-cell-grid-image" src="{{resizeImage thumbnail.url 'thumbnail'}}" alt="{{thumbnail.altimagetext}}" itemprop="image"/>
+			{{#if showdefaultImage}}
+				<img class="facets-item-cell-grid-image" src="{{resizeImage thumbnail.url 'thumbnail'}}" alt="{{thumbnail.altimagetext}}" itemprop="image"/>
+			{{else if showfeaturedimage}}
+				<img class="facets-item-cell-grid-image" src="{{imgsrcurl}}{{featuredimage}}" alt="{{thumbnail.altimagetext}}" itemprop="image"/>
+			{{else if showImage1}}
+				<img class="facets-item-cell-grid-image" src="{{imgsrcurl}}{{image1}}" alt="{{thumbnail.altimagetext}}" itemprop="image"/>
+			{{/if}}
 		</a>
 		{{#if isEnvironmentBrowser}}
 			<div class="facets-item-cell-grid-quick-view-wrapper">
@@ -44,8 +50,6 @@
 </div>
 
 
-
-
 {{!----
 Use the following context variables when customizing this template: 
 	
@@ -62,3 +66,5 @@ Use the following context variables when customizing this template:
 	rating (Number)
 
 ----}}
+
+

@@ -9,7 +9,7 @@
         "SCA": ">=21.1.0",
         "SCS": ">=21.1.0"
     },
-    "description": " ",
+    "description": "Hides Quote buttons for non dealer and distributor customer types.",
     "skins": [],
     "assets": {
         "img": {

@@ -9,7 +9,7 @@
         "SCA": ">=21.1.0",
         "SCS": ">=21.1.0"
     },
-    "description": " ",
+    "description": "Source Footer details on SuiteCommerce Configuration fields ",
     "skins": [],
     "assets": {
         "img": {

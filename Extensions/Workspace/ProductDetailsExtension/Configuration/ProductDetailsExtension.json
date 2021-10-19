@@ -1,0 +1,25 @@
+{
+	"type": "object",
+
+	"subtab": {
+		"id": "customimageSolution",
+		"title": "Custom Image Solution",
+		"group": "layout"
+	},
+
+	"properties": {
+		"customimagesolution.sourceurl": {
+			"group": "layout",
+			"subtab": "customimageSolution",
+			"type": "string",
+			"title": "Image URL Path"
+		},
+
+        "customimagesolution.shoppingurl": {
+			"group": "layout",
+			"subtab": "customimageSolution",
+			"type": "string",
+			"title": "Shopping URL"
+		}
+	}
+}

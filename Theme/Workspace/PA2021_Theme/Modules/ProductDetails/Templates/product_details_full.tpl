@@ -74,6 +74,56 @@
 							</section>
 						{{/if}}
 						
+						{{#ifEquals model.item.itemtype "InvtPart"}}
+                        <div class="pdp-attributes-container">
+                            {{#ifEquals condition '&nbsp;'}} {{else}} 
+							<div class="product-detail-options">
+							<span class="product-detail-options-label">
+							<i data-toggle="tooltip" data-placement="bottom" class="cart-summary-expander-tooltip"
+            				title="
+							{{#if new}}
+							{{translate 'Insert text for New'}}
+							{{else if demo}}
+							{{translate 'Photo samples, gear we auditioned in our listening room, items returned for wrong color/wrong size, etc.'}}
+							{{else if openbox}}
+							{{translate 'Contents briefly examined or inspected'}}
+							{{else if factory}}
+							{{translate 'Original-condition items repackaged by the manufacturer'}}
+							{{else if cosmetically_blemished }}
+							{{translate 'A few dings or scratches, but functionally in original condition'}}
+							{{else if used }}
+							{{translate 'May show some signs of use'}}
+							{{/if}}
+							">
+						</i>
+							Condition:</span><span class="product-detail-options-value ">{{condition}}
+							</span></div>{{/ifEquals}}	
+
+                            {{#ifEquals finish '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Finish:</span><span class="product-detail-options-label"></span><span class="product-detail-options-value">{{finish}}</span></div>{{/ifEquals}}
+                            {{#ifEquals length_metric '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Length (Metric):</span><span class="product-detail-options-value">{{length_metric}}</span></div>{{/ifEquals}}
+                            {{#ifEquals length_us '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Length (US):</span><span class="product-detail-options-value">{{length_us}}</span></div>{{/ifEquals}}
+                            {{#ifEquals amptospeaker '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Amp to Speaker:</span><span class="product-detail-options-value">{{amptospeaker}}</span></div>{{/ifEquals}}
+                            {{#ifEquals storage '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Storage:</span><span class="product-detail-options-value">{{storage}}</span></div>{{/ifEquals}}
+                            {{#ifEquals cartridge_output '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Cartridge Output:</span><span class="product-detail-options-value">{{cartridge_output}}</span></div>{{/ifEquals}}
+                            {{#ifEquals rackmount '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Rackmount:</span><span class="product-detail-options-value">{{rackmount}}</span></div>{{/ifEquals}}
+                            {{#ifEquals pair_or_single '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Pair or Single:</span><span class="product-detail-options-value">{{pair_or_single}}</span></div>{{/ifEquals}}
+                            {{#ifEquals interconnect_end '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Interconnect End:</span><span class="product-detail-options-value">{{interconnect_end}}</span></div>{{/ifEquals}}
+                            {{#ifEquals color '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Color:</span><span class="product-detail-options-value">{{color}}</span></div>{{/ifEquals}}
+                            {{#ifEquals height '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Height:</span><span class="product-detail-options-value">{{height}}</span></div>{{/ifEquals}}
+                            {{#ifEquals volume '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Volume:</span><span class="product-detail-options-value">{{volume}}</span></div>{{/ifEquals}}
+                            {{#ifEquals amperage '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Amperage:</span><span class="product-detail-options-value">{{amperage}}</span></div>{{/ifEquals}}
+                            {{#ifEquals tonearmtype '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Tonearm Type:</span><span class="product-detail-options-value">{{tonearmtype}}</span></div>{{/ifEquals}}
+                            {{#ifEquals drawer_size '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Drawer Size:</span><span class="product-detail-options-value">{{drawer_size}}</span></div>{{/ifEquals}}
+                            {{#ifEquals treatment '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Treatment:</span><span class="product-detail-options-value">{{treatment}}</span></div>{{/ifEquals}}
+                            {{#ifEquals cable_contact_type '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Cable Type:</span><span class="product-detail-options-value">{{cable_contact_type}}</span></div>{{/ifEquals}}
+                            {{#ifEquals boxsize '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Box Size:</span><span class="product-detail-options-value">{{boxsize}}</span></div>{{/ifEquals}}
+                            {{#ifEquals size '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Size:</span><span class="product-detail-options-value">{{size}}</span></div>{{/ifEquals}}
+                            {{#ifEquals width '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Width:</span><span class="product-detail-options-value">{{width}}</span></div>{{/ifEquals}}
+                            {{#ifEquals weightcapacity '&nbsp;'}}{{else}} <div class="product-detail-options"><span class="product-detail-options-label">Weight Capacity:</span><span class="product-detail-options-value">{{weightcapacity}}</span></div>{{/ifEquals}}
+                        </div>
+                        {{/ifEquals}}
+
+
 
 						{{#if showkitComponents}}
 						<div data-view="KitComponents"></div>

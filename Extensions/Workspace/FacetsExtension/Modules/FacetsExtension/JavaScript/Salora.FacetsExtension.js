@@ -9,6 +9,7 @@ define(
 ,	'ProductViews.Price.View'
 , 	'Facets.Browse.CategoryHeading.View'
 , 	'Categories.Utils'
+,	'SC.Configuration'
 	]
 ,   function (
 	_
@@ -18,6 +19,7 @@ define(
 ,	ProductViewsPriceView
 , 	FacetsBrowseCategoryHeadingView
 ,	CategoriesUtils
+,	Configuration
 	)
 {
 	'use strict';
@@ -41,6 +43,12 @@ define(
 		{
 			FacetsItemCellView.prototype.getContext = _.wrap(FacetsItemCellView.prototype.getContext, function (fn) {
 				var context = fn.apply(this, _.toArray(arguments).slice(1));	
+				context.imgsrcurl = Configuration.get('customimagesolution.sourceurl');
+				context.featuredimage = this.model.get('custitem_featued_image');
+				context.featuredimage = this.model.get('custitem_featued_image');
+				context.showfeaturedimage = this.model.get('custitem_featued_image') !== "";
+				context.showImage1 = this.model.get('custitem_image_1') !== ""
+				context.showdefaultImage = this.model.get('custitem_featued_image') == "" && this.model.get('custitem_image_1') == "";
 				context.productType = this.model.get('custitem_jhm_product_type')
 				context.description = this.model.get('storedescription')
 				return context;

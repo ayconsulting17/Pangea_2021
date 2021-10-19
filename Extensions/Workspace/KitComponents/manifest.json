@@ -1,16 +1,15 @@
 {
     "name": "KitComponents",
     "fantasyName": "KitComponents",
-    "vendor": "AA",
-    "version": "1.0.0",
+    "vendor": "Salora",
     "type": "extension",
     "target": "SCA,SCS",
     "target_version": {
         "SCA": ">=21.1.0",
         "SCS": ">=21.1.0"
     },
+    "version": "1.0.0",
     "description": " ",
-    "skins": [],
     "assets": {
         "img": {
             "files": []
@@ -55,7 +54,6 @@
             "Modules/KitComponents/SuiteScript/KitComponents.js"
         ]
     },
-    "local_folder": "Workspace/KitComponents",
     "suitescript2": {
         "files": [
             "Modules/KitComponents/SuiteScript2/KitComponents.Service.ss"

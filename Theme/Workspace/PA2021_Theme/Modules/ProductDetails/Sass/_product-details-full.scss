@@ -372,3 +372,17 @@ color:#2E3C97;
 .instock-label{
 	display: inline-block;
 }
+
+.product-detail-options {
+    padding: 5px;
+}
+
+.tooltip.bottom > .tooltip-arrow {
+    border-bottom-color: #2E3C97 !important;
+    border-width: 0 5px 5px;
+}
+
+
+.tooltip-inner {
+border:none !important;
+}
