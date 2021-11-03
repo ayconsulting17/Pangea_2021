@@ -38,6 +38,14 @@
 								<div data-view="Manuals"></div>
 								</div>
 								{{/ifEquals}}
+
+
+								{{#ifEquals name 'Web Reviews'}}
+								<div class="web-reviews-detail">
+								<div data-view="CustomWebReviewsItemView"></div>
+								</div>
+								{{/ifEquals}}
+
 								</div>
 								
 							{{/each}}

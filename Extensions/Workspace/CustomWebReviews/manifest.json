@@ -1,0 +1,79 @@
+{
+    "name": "CustomWebReviews",
+    "fantasyName": "CustomWebReviews",
+    "vendor": "Salora",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCS,SCA",
+    "target_version": {
+        "SCS": ">=21.1.0",
+        "SCA": ">=21.1.0"
+    },
+    "description": "",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/CustomWebReviews.Service.ss"
+            ]
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/CustomWebReviews/Configuration/CustomWebReviews.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/CustomWebReviews/Sass/_customwebreviews-customwebreviews.scss"
+        },
+        "files": [
+            "Modules/CustomWebReviews/Sass/_customwebreviews-customwebreviews.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/CustomWebReviews/Templates/customwebreviews.tpl",
+                    "Modules/CustomWebReviews/Templates/customwebreviews_item.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/CustomWebReviews/JavaScript/CustomWebReviews.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/CustomWebReviews/JavaScript/CustomWebReviews.View.js",
+                    "Modules/CustomWebReviews/JavaScript/CustomWebReviewsItem.View.js",
+                    "Modules/CustomWebReviews/JavaScript/CustomWebReviews.js",
+                    "Modules/CustomWebReviews/JavaScript/CustomWebReviews.Model.js",
+                    "Modules/CustomWebReviews/JavaScript/CustomWebReviews.SS2Model.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/CustomWebReviews/SuiteScript/Salora.CustomWebReviews.CustomWebReviews.js",
+        "files": [
+            "Modules/CustomWebReviews/SuiteScript/Salora.CustomWebReviews.CustomWebReviews.js",
+            "Modules/CustomWebReviews/SuiteScript/CustomWebReviews.ServiceController.js"
+        ]
+    },
+    "local_folder": "Workspace/CustomWebReviews",
+    "suitescript2": {
+        "files": [
+            "Modules/CustomWebReviews/SuiteScript2/CustomWebReviews.Service.ss"
+        ]
+    }
+}

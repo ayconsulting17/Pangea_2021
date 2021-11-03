@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": { 
+        "CustomWebReviews.config": {
+            "group": "extensions",
+            "subtab": "CustomWebReviews_subtab",
+            "type": "string",
+            "title": "CustomWebReviews_Title",
+            "description": "Config description example",
+            "default": "Default config example"
+        }
+    }
+}

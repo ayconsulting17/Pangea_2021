@@ -79,11 +79,11 @@
                             {{#ifEquals condition '&nbsp;'}} {{else}} 
 							<div class="product-detail-options">
 							<span class="product-detail-options-label">
+							{{#if new}}
+							{{else}}
 							<i data-toggle="tooltip" data-placement="bottom" class="cart-summary-expander-tooltip"
             				title="
-							{{#if new}}
-							{{translate 'Insert text for New'}}
-							{{else if demo}}
+							{{#if demo}}
 							{{translate 'Photo samples, gear we auditioned in our listening room, items returned for wrong color/wrong size, etc.'}}
 							{{else if openbox}}
 							{{translate 'Contents briefly examined or inspected'}}
@@ -95,6 +95,7 @@
 							{{translate 'May show some signs of use'}}
 							{{/if}}
 							">
+							{{/if}}
 						</i>
 							Condition:</span><span class="product-detail-options-value ">{{condition}}
 							</span></div>{{/ifEquals}}	
